@@ -133,21 +133,21 @@ Node *deleteNode(Node *root, int X) {
     }
     else {
  
-        Node* succParent = root;
-        Node* succ = root->right;
-        while (succ->left != NULL) {
-            succParent = succ;
-            succ = succ->left;
+        Node* successorParent = root;
+        Node* successor = root->right;
+        while (successor->left != NULL) {
+            successorParent= successor;
+            successor = successor->left;
         }
-        if (succParent != root)
-            succParent->left = succ->right;
+        if (successorParent != root)
+            successorParent->left = successor->right;
         else
-            succParent->right = succ->right;
+            successorParent->right = successor->right;
 
-        root->data = succ->data;
+        root->data = successor->data;
  
 
-        delete succ;
+        delete successor;
         return root;
     }
 }
