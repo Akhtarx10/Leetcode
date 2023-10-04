@@ -1,21 +1,24 @@
 class Solution {
  public:
   bool wordBreak(string s, vector<string>& wordDict) {
-    const int n = s.length();
-    const unordered_set<string> wordSet{wordDict.begin(), wordDict.end()};
-    // dp[i] := true if s[0..i) can be segmented
-    vector<bool> dp(n + 1);
-    dp[0] = true;
+    return wordBreak(s, 0, {wordDict.begin(), wordDict.end()},
+                     vector<int>(s.length(), -1));
+  }
 
-    for (int i = 1; i <= n; ++i)
-      for (int j = 0; j < i; ++j)
-        // s[0..j) can be segmented and s[j..i) in wordSet, so s[0..i) can be
-        // segmented
-        if (dp[j] && wordSet.count(s.substr(j, i - j))) {
-          dp[i] = true;
-          break;
-        }
+ private:
+  // Returns true if s[i:] can be segmented.
+  bool wordBreak(const string& s, int i, const unordered_set<string>&& wordSet,
+                 vector<int>&& memo) {
+    if (i == s.length())
+      return true;
+    if (memo[i] != -1)
+      return memo[i];
 
-    return dp[n];
+    for (int j = i + 1; j <= s.length(); ++j)
+      if (wordSet.count(s.substr(i, j - i)) &&
+          wordBreak(s, j, move(wordSet), move(memo)))
+        return memo[i] = 1;
+
+    return memo[i] = 0;
   }
 };
