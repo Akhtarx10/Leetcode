@@ -1,24 +1,25 @@
 class Solution {
  public:
   bool wordBreak(string s, vector<string>& wordDict) {
-    return wordBreak(s, 0, {wordDict.begin(), wordDict.end()},
-                     vector<int>(s.length(), -1));
+    return wordBreak(s, {wordDict.begin(), wordDict.end()}, {});
   }
 
  private:
-  // Returns true if s[i:] can be segmented.
-  bool wordBreak(const string& s, int i, const unordered_set<string>&& wordSet,
-                 vector<int>&& memo) {
-    if (i == s.length())
+  bool wordBreak(const string& s, const unordered_set<string>&& wordSet,
+                 unordered_map<string, bool>&& memo) {
+    if (wordSet.count(s))
       return true;
-    if (memo[i] != -1)
-      return memo[i];
+    if (const auto it = memo.find(s); it != memo.cend())
+      return it->second;
 
-    for (int j = i + 1; j <= s.length(); ++j)
-      if (wordSet.count(s.substr(i, j - i)) &&
-          wordBreak(s, j, move(wordSet), move(memo)))
-        return memo[i] = 1;
+    // 1 <= prefix.length() < s.length()
+    for (int i = 1; i < s.length(); ++i) {
+      const string& prefix = s.substr(0, i);
+      const string& suffix = s.substr(i);
+      if (wordSet.count(prefix) && wordBreak(suffix, move(wordSet), move(memo)))
+        return memo[s] = true;
+    }
 
-    return memo[i] = 0;
+    return memo[s] = false;
   }
 };
