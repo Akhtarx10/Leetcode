@@ -20,7 +20,7 @@ class Solution
                 pendingIndices.pop_back();
                 result[prev_index] = arr[i]; // Update the result for the previous element
             }
-            pendingIndices.push_back(i); // Add the current index to pending indices
+            pendingIndices.push_back(i); 
         }
 
         return result;
