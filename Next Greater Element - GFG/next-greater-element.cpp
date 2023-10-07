@@ -10,16 +10,17 @@ class Solution
     //Function to find the next greater element for each element of the array.
     vector<long long> nextLargerElement(vector<long long> arr, int n){
         // Your code here
-        std::vector<long long> result(n, -1);
-        std::stack<int> s; 
+       std::vector<long long> result(n, -1); // Initialize the result array with -1
+        std::vector<int> pendingIndices; // Keep track of indices for which we haven't found the next larger element
 
         for (int i = 0; i < n; i++) {
-            while (!s.empty() && arr[i] > arr[s.top()]) {
-                int prev_index = s.top(); 
-                s.pop();
-                result[prev_index] = arr[i]; 
+            // Check if there are pending indices and the current element is greater
+            while (!pendingIndices.empty() && arr[i] > arr[pendingIndices.back()]) {
+                int prev_index = pendingIndices.back(); // Get the index of the previous element
+                pendingIndices.pop_back();
+                result[prev_index] = arr[i]; // Update the result for the previous element
             }
-            s.push(i); 
+            pendingIndices.push_back(i); // Add the current index to pending indices
         }
 
         return result;
