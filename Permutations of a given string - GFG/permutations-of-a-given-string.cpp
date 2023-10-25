@@ -8,12 +8,12 @@ using namespace std;
 class Solution {
 public:
     vector<string> find_permutation(string S) {
-        vector<string> permutations;
+        vector<string> ans;
         sort(S.begin(), S.end());
         do {
-            permutations.push_back(S);
+            ans.push_back(S);
         } while (next_permutation(S.begin(), S.end()));
-        return permutations;
+        return ans;
     }
 };
 
