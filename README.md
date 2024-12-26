@@ -6,6 +6,7 @@
 | ------- |
 | [0053-maximum-subarray](https://github.com/Akhtarx10/Leetcode/tree/master/0053-maximum-subarray) |
 | [0169-majority-element](https://github.com/Akhtarx10/Leetcode/tree/master/0169-majority-element) |
+| [0494-target-sum](https://github.com/Akhtarx10/Leetcode/tree/master/0494-target-sum) |
 | [0780-max-chunks-to-make-sorted](https://github.com/Akhtarx10/Leetcode/tree/master/0780-max-chunks-to-make-sorted) |
 | [1570-final-prices-with-a-special-discount-in-a-shop](https://github.com/Akhtarx10/Leetcode/tree/master/1570-final-prices-with-a-special-discount-in-a-shop) |
 | [2486-most-frequent-even-element](https://github.com/Akhtarx10/Leetcode/tree/master/2486-most-frequent-even-element) |
@@ -20,6 +21,7 @@
 |  |
 | ------- |
 | [0053-maximum-subarray](https://github.com/Akhtarx10/Leetcode/tree/master/0053-maximum-subarray) |
+| [0494-target-sum](https://github.com/Akhtarx10/Leetcode/tree/master/0494-target-sum) |
 ## Hash Table
 |  |
 | ------- |
@@ -112,4 +114,8 @@
 |  |
 | ------- |
 | [3439-find-minimum-diameter-after-merging-two-trees](https://github.com/Akhtarx10/Leetcode/tree/master/3439-find-minimum-diameter-after-merging-two-trees) |
+## Backtracking
+|  |
+| ------- |
+| [0494-target-sum](https://github.com/Akhtarx10/Leetcode/tree/master/0494-target-sum) |
 <!---LeetCode Topics End-->
