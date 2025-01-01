@@ -1,17 +1,17 @@
 class Solution {
   public int maxScore(String s) {
-    int ans = 0;
-    int zeros = 0;
-    int ones = (int) s.chars().filter(c -> c == '1').count();
+    int zeros = 0, ones = 0, maxScore = 0;
 
-    for (int i = 0; i + 1 < s.length(); ++i) {
-      if (s.charAt(i) == '0')
-        ++zeros;
-      else
-        --ones;
-      ans = Math.max(ans, zeros + ones);
+    for (char c : s.toCharArray()) {
+      if (c == '1') ones++;
     }
 
-    return ans;
+    for (int i = 0; i < s.length() - 1; i++) {
+      if (s.charAt(i) == '0') zeros++;
+      else ones--;
+      maxScore = Math.max(maxScore, zeros + ones);
+    }
+
+    return maxScore;
   }
 }
