@@ -65,6 +65,7 @@
 ## String
 |  |
 | ------- |
+| [1537-maximum-score-after-splitting-a-string](https://github.com/Akhtarx10/Leetcode/tree/master/1537-maximum-score-after-splitting-a-string) |
 | [1744-number-of-ways-to-form-a-target-string-given-a-dictionary](https://github.com/Akhtarx10/Leetcode/tree/master/1744-number-of-ways-to-form-a-target-string-given-a-dictionary) |
 | [2300-construct-string-with-repeat-limit](https://github.com/Akhtarx10/Leetcode/tree/master/2300-construct-string-with-repeat-limit) |
 ## Greedy
@@ -132,4 +133,8 @@
 |  |
 | ------- |
 | [0494-target-sum](https://github.com/Akhtarx10/Leetcode/tree/master/0494-target-sum) |
+## Prefix Sum
+|  |
+| ------- |
+| [1537-maximum-score-after-splitting-a-string](https://github.com/Akhtarx10/Leetcode/tree/master/1537-maximum-score-after-splitting-a-string) |
 <!---LeetCode Topics End-->
