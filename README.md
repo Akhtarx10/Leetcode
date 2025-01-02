@@ -14,6 +14,7 @@
 | [1570-final-prices-with-a-special-discount-in-a-shop](https://github.com/Akhtarx10/Leetcode/tree/master/1570-final-prices-with-a-special-discount-in-a-shop) |
 | [1744-number-of-ways-to-form-a-target-string-given-a-dictionary](https://github.com/Akhtarx10/Leetcode/tree/master/1744-number-of-ways-to-form-a-target-string-given-a-dictionary) |
 | [2486-most-frequent-even-element](https://github.com/Akhtarx10/Leetcode/tree/master/2486-most-frequent-even-element) |
+| [2691-count-vowel-strings-in-ranges](https://github.com/Akhtarx10/Leetcode/tree/master/2691-count-vowel-strings-in-ranges) |
 | [3181-find-building-where-alice-and-bob-can-meet](https://github.com/Akhtarx10/Leetcode/tree/master/3181-find-building-where-alice-and-bob-can-meet) |
 | [3555-final-array-state-after-k-multiplication-operations-i](https://github.com/Akhtarx10/Leetcode/tree/master/3555-final-array-state-after-k-multiplication-operations-i) |
 ## Divide and Conquer
@@ -68,6 +69,7 @@
 | [1537-maximum-score-after-splitting-a-string](https://github.com/Akhtarx10/Leetcode/tree/master/1537-maximum-score-after-splitting-a-string) |
 | [1744-number-of-ways-to-form-a-target-string-given-a-dictionary](https://github.com/Akhtarx10/Leetcode/tree/master/1744-number-of-ways-to-form-a-target-string-given-a-dictionary) |
 | [2300-construct-string-with-repeat-limit](https://github.com/Akhtarx10/Leetcode/tree/master/2300-construct-string-with-repeat-limit) |
+| [2691-count-vowel-strings-in-ranges](https://github.com/Akhtarx10/Leetcode/tree/master/2691-count-vowel-strings-in-ranges) |
 ## Greedy
 |  |
 | ------- |
@@ -137,4 +139,5 @@
 |  |
 | ------- |
 | [1537-maximum-score-after-splitting-a-string](https://github.com/Akhtarx10/Leetcode/tree/master/1537-maximum-score-after-splitting-a-string) |
+| [2691-count-vowel-strings-in-ranges](https://github.com/Akhtarx10/Leetcode/tree/master/2691-count-vowel-strings-in-ranges) |
 <!---LeetCode Topics End-->
