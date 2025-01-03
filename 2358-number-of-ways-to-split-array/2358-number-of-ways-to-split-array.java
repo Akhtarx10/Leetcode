@@ -1,23 +1,23 @@
 class Solution {
     public int waysToSplitArray(int[] nums) {
-        int ans=0;
-        long prefix =0;
-        long suffix =0;
+        long sum = 0;
 
         for(int num : nums){
-            suffix += num;
+            sum += num;
         }
 
-        for(int i=0;i<nums.length-1;i++){
-            prefix += nums[i];
-            suffix -= nums[i];
+        int i = 0;
+        int cnt = 0;
+        long n = 0;
+        while(i < nums.length-1){
+            n += nums[i];
+            long r = sum - n;
 
-            if(prefix >= suffix){
-                ++ans;
+            if(n >= r){
+                cnt++;
             }
+            i++;
         }
-
-        return ans;
-        
+        return cnt;
     }
 }
