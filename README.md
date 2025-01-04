@@ -37,6 +37,7 @@
 |  |
 | ------- |
 | [0169-majority-element](https://github.com/Akhtarx10/Leetcode/tree/master/0169-majority-element) |
+| [2059-unique-length-3-palindromic-subsequences](https://github.com/Akhtarx10/Leetcode/tree/master/2059-unique-length-3-palindromic-subsequences) |
 | [2300-construct-string-with-repeat-limit](https://github.com/Akhtarx10/Leetcode/tree/master/2300-construct-string-with-repeat-limit) |
 | [2486-most-frequent-even-element](https://github.com/Akhtarx10/Leetcode/tree/master/2486-most-frequent-even-element) |
 ## Sorting
@@ -69,6 +70,7 @@
 | ------- |
 | [1537-maximum-score-after-splitting-a-string](https://github.com/Akhtarx10/Leetcode/tree/master/1537-maximum-score-after-splitting-a-string) |
 | [1744-number-of-ways-to-form-a-target-string-given-a-dictionary](https://github.com/Akhtarx10/Leetcode/tree/master/1744-number-of-ways-to-form-a-target-string-given-a-dictionary) |
+| [2059-unique-length-3-palindromic-subsequences](https://github.com/Akhtarx10/Leetcode/tree/master/2059-unique-length-3-palindromic-subsequences) |
 | [2300-construct-string-with-repeat-limit](https://github.com/Akhtarx10/Leetcode/tree/master/2300-construct-string-with-repeat-limit) |
 | [2691-count-vowel-strings-in-ranges](https://github.com/Akhtarx10/Leetcode/tree/master/2691-count-vowel-strings-in-ranges) |
 ## Greedy
@@ -140,6 +142,11 @@
 |  |
 | ------- |
 | [1537-maximum-score-after-splitting-a-string](https://github.com/Akhtarx10/Leetcode/tree/master/1537-maximum-score-after-splitting-a-string) |
+| [2059-unique-length-3-palindromic-subsequences](https://github.com/Akhtarx10/Leetcode/tree/master/2059-unique-length-3-palindromic-subsequences) |
 | [2358-number-of-ways-to-split-array](https://github.com/Akhtarx10/Leetcode/tree/master/2358-number-of-ways-to-split-array) |
 | [2691-count-vowel-strings-in-ranges](https://github.com/Akhtarx10/Leetcode/tree/master/2691-count-vowel-strings-in-ranges) |
+## Bit Manipulation
+|  |
+| ------- |
+| [2059-unique-length-3-palindromic-subsequences](https://github.com/Akhtarx10/Leetcode/tree/master/2059-unique-length-3-palindromic-subsequences) |
 <!---LeetCode Topics End-->
