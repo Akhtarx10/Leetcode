@@ -1,22 +1,11 @@
 class Solution {
     public int findNumbers(int[] nums) {
-        int count = 0;
+        int count =0;
         for(int val : nums){
-            if(even(val)){
+            if((int)((Math.log10(val)) + 1) % 2 == 0){
                 count++;
             }
         }
         return count;
-    }
-    static boolean even(int n){
-        int count =0;
-        while(n>0){
-            count++;
-            n=n/10;
-        }
-        if(count%2 == 0){
-            return true;
-        }
-        return false;
     }
 }
