@@ -11,6 +11,7 @@
 | [0780-max-chunks-to-make-sorted](https://github.com/Akhtarx10/Leetcode/tree/master/0780-max-chunks-to-make-sorted) |
 | [1025-minimum-cost-for-tickets](https://github.com/Akhtarx10/Leetcode/tree/master/1025-minimum-cost-for-tickets) |
 | [1063-best-sightseeing-pair](https://github.com/Akhtarx10/Leetcode/tree/master/1063-best-sightseeing-pair) |
+| [1421-find-numbers-with-even-number-of-digits](https://github.com/Akhtarx10/Leetcode/tree/master/1421-find-numbers-with-even-number-of-digits) |
 | [1524-string-matching-in-an-array](https://github.com/Akhtarx10/Leetcode/tree/master/1524-string-matching-in-an-array) |
 | [1570-final-prices-with-a-special-discount-in-a-shop](https://github.com/Akhtarx10/Leetcode/tree/master/1570-final-prices-with-a-special-discount-in-a-shop) |
 | [1744-number-of-ways-to-form-a-target-string-given-a-dictionary](https://github.com/Akhtarx10/Leetcode/tree/master/1744-number-of-ways-to-form-a-target-string-given-a-dictionary) |
@@ -59,6 +60,7 @@
 ## Math
 |  |
 | ------- |
+| [1421-find-numbers-with-even-number-of-digits](https://github.com/Akhtarx10/Leetcode/tree/master/1421-find-numbers-with-even-number-of-digits) |
 | [3555-final-array-state-after-k-multiplication-operations-i](https://github.com/Akhtarx10/Leetcode/tree/master/3555-final-array-state-after-k-multiplication-operations-i) |
 ## Heap (Priority Queue)
 |  |
