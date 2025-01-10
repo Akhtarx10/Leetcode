@@ -1,32 +1,34 @@
 class Solution {
-    public List<String> wordSubsets(String[] words1, String[] words2) {
-        int[] cnt = new int[26];
-        for (var b : words2) {
-            int[] t = new int[26];
-            for (int i = 0; i < b.length(); ++i) {
-                t[b.charAt(i) - 'a']++;
-            }
-            for (int i = 0; i < 26; ++i) {
-                cnt[i] = Math.max(cnt[i], t[i]);
-            }
-        }
-        List<String> ans = new ArrayList<>();
-        for (var a : words1) {
-            int[] t = new int[26];
-            for (int i = 0; i < a.length(); ++i) {
-                t[a.charAt(i) - 'a']++;
-            }
-            boolean ok = true;
-            for (int i = 0; i < 26; ++i) {
-                if (cnt[i] > t[i]) {
-                    ok = false;
-                    break;
-                }
-            }
-            if (ok) {
-                ans.add(a);
+    public List<String> wordSubsets(String[] A, String[] B) {
+       List<String> result=new ArrayList<>();
+        int[] target=new int[26];
+        
+        for(String word:B){
+            int[] temp=new int[26];
+            for(char ch:word.toCharArray()){
+                temp[ch-'a']++;
+                target[ch-'a']=Math.max(target[ch-'a'],temp[ch-'a']);
             }
         }
-        return ans;
+        
+        for(String word:A){
+            int[] source=new int[26];
+            for(char ch:word.toCharArray()){
+                source[ch-'a']++;
+            }
+            
+            if(subset(source,target)){
+                result.add(word);
+            }
+        }
+        
+        return result;
+    }
+    
+    private boolean subset(int[] parent,int[] child){
+        for(int i=0;i<26;i++){
+            if(parent[i]<child[i]) return false;
+        }
+        return true;
     }
 }
