@@ -1,17 +1,21 @@
 class Solution {
     public boolean canConstruct(String s, int k) {
-        int n = s.length();
-        if (n < k) {
-            return false;
+        // Handle edge cases
+        if (s.length() < k) return false;
+        if (s.length() == k) return true;
+
+
+        // Initialize oddCount as an integer bitmask
+        int oddCount = 0;
+
+
+        // Update the bitmask for each character in the string
+        for (char chr : s.toCharArray()) {
+            oddCount ^= 1 << (chr - 'a');
         }
-        int[] cnt = new int[26];
-        for (int i = 0; i < n; ++i) {
-            ++cnt[s.charAt(i) - 'a'];
-        }
-        int x = 0;
-        for (int v : cnt) {
-            x += v & 1;
-        }
-        return x <= k;
+
+
+        // Return if the number of odd frequencies is less than or equal to k
+        return Integer.bitCount(oddCount) <= k;
     }
 }
