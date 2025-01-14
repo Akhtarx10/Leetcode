@@ -1,18 +1,15 @@
 class Solution {
-  public int[] findThePrefixCommonArray(int[] A, int[] B) {
-    final int n = A.length;
-    int prefixCommon = 0;
-    int[] ans = new int[n];
-    int[] count = new int[n + 1];
-
-    for (int i = 0; i < A.length; ++i) {
-      if (++count[A[i]] == 2)
-        ++prefixCommon;
-      if (++count[B[i]] == 2)
-        ++prefixCommon;
-      ans[i] = prefixCommon;
+    public int[] findThePrefixCommonArray(int[] A, int[] B) {
+        int n = A.length;
+        int[] result = new int[n];
+        int[] arr = new int[n + 1];
+        int max = 0;
+        for (int i = 0; i < n; i++) {
+            if (++arr[A[i]] == 2) max++;
+            if (++arr[B[i]] == 2) max++;
+            result[i] = max;
+        }
+        
+        return result;
     }
-
-    return ans;
-  }
 }
