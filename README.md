@@ -16,6 +16,7 @@
 | [0952-word-subsets](https://github.com/Akhtarx10/Leetcode/tree/master/0952-word-subsets) |
 | [1025-minimum-cost-for-tickets](https://github.com/Akhtarx10/Leetcode/tree/master/1025-minimum-cost-for-tickets) |
 | [1063-best-sightseeing-pair](https://github.com/Akhtarx10/Leetcode/tree/master/1063-best-sightseeing-pair) |
+| [1185-find-in-mountain-array](https://github.com/Akhtarx10/Leetcode/tree/master/1185-find-in-mountain-array) |
 | [1421-find-numbers-with-even-number-of-digits](https://github.com/Akhtarx10/Leetcode/tree/master/1421-find-numbers-with-even-number-of-digits) |
 | [1524-string-matching-in-an-array](https://github.com/Akhtarx10/Leetcode/tree/master/1524-string-matching-in-an-array) |
 | [1570-final-prices-with-a-special-discount-in-a-shop](https://github.com/Akhtarx10/Leetcode/tree/master/1570-final-prices-with-a-special-discount-in-a-shop) |
@@ -157,6 +158,7 @@
 | [0162-find-peak-element](https://github.com/Akhtarx10/Leetcode/tree/master/0162-find-peak-element) |
 | [0745-find-smallest-letter-greater-than-target](https://github.com/Akhtarx10/Leetcode/tree/master/0745-find-smallest-letter-greater-than-target) |
 | [0882-peak-index-in-a-mountain-array](https://github.com/Akhtarx10/Leetcode/tree/master/0882-peak-index-in-a-mountain-array) |
+| [1185-find-in-mountain-array](https://github.com/Akhtarx10/Leetcode/tree/master/1185-find-in-mountain-array) |
 | [3181-find-building-where-alice-and-bob-can-meet](https://github.com/Akhtarx10/Leetcode/tree/master/3181-find-building-where-alice-and-bob-can-meet) |
 ## Binary Indexed Tree
 |  |
@@ -210,4 +212,8 @@
 |  |
 | ------- |
 | [1791-richest-customer-wealth](https://github.com/Akhtarx10/Leetcode/tree/master/1791-richest-customer-wealth) |
+## Interactive
+|  |
+| ------- |
+| [1185-find-in-mountain-array](https://github.com/Akhtarx10/Leetcode/tree/master/1185-find-in-mountain-array) |
 <!---LeetCode Topics End-->
