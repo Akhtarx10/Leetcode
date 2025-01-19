@@ -8,6 +8,7 @@
 | [0053-maximum-subarray](https://github.com/Akhtarx10/Leetcode/tree/master/0053-maximum-subarray) |
 | [0162-find-peak-element](https://github.com/Akhtarx10/Leetcode/tree/master/0162-find-peak-element) |
 | [0169-majority-element](https://github.com/Akhtarx10/Leetcode/tree/master/0169-majority-element) |
+| [0407-trapping-rain-water-ii](https://github.com/Akhtarx10/Leetcode/tree/master/0407-trapping-rain-water-ii) |
 | [0494-target-sum](https://github.com/Akhtarx10/Leetcode/tree/master/0494-target-sum) |
 | [0689-maximum-sum-of-3-non-overlapping-subarrays](https://github.com/Akhtarx10/Leetcode/tree/master/0689-maximum-sum-of-3-non-overlapping-subarrays) |
 | [0745-find-smallest-letter-greater-than-target](https://github.com/Akhtarx10/Leetcode/tree/master/0745-find-smallest-letter-greater-than-target) |
@@ -82,6 +83,7 @@
 ## Heap (Priority Queue)
 |  |
 | ------- |
+| [0407-trapping-rain-water-ii](https://github.com/Akhtarx10/Leetcode/tree/master/0407-trapping-rain-water-ii) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/Akhtarx10/Leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
 | [2300-construct-string-with-repeat-limit](https://github.com/Akhtarx10/Leetcode/tree/master/2300-construct-string-with-repeat-limit) |
 | [3181-find-building-where-alice-and-bob-can-meet](https://github.com/Akhtarx10/Leetcode/tree/master/3181-find-building-where-alice-and-bob-can-meet) |
@@ -146,6 +148,7 @@
 ## Breadth-First Search
 |  |
 | ------- |
+| [0407-trapping-rain-water-ii](https://github.com/Akhtarx10/Leetcode/tree/master/0407-trapping-rain-water-ii) |
 | [0515-find-largest-value-in-each-tree-row](https://github.com/Akhtarx10/Leetcode/tree/master/0515-find-largest-value-in-each-tree-row) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/Akhtarx10/Leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
 | [2493-reverse-odd-levels-of-binary-tree](https://github.com/Akhtarx10/Leetcode/tree/master/2493-reverse-odd-levels-of-binary-tree) |
@@ -221,6 +224,7 @@
 ## Matrix
 |  |
 | ------- |
+| [0407-trapping-rain-water-ii](https://github.com/Akhtarx10/Leetcode/tree/master/0407-trapping-rain-water-ii) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/Akhtarx10/Leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
 | [1791-richest-customer-wealth](https://github.com/Akhtarx10/Leetcode/tree/master/1791-richest-customer-wealth) |
 ## Interactive
