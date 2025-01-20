@@ -1,29 +1,24 @@
 class Solution {
-  public int firstCompleteIndex(int[] arr, int[][] mat) {
-    final int m = mat.length;
-    final int n = mat[0].length;
-    // rows[i] := the number of painted grid in the i-th row
-    int[] rows = new int[m];
-    // cols[j] := the number of painted grid in the j-th column
-    int[] cols = new int[n];
-    // numToRow[num] := the i-th row of `num` in `mat`
-    int[] numToRow = new int[m * n + 1];
-    // numToCol[num] := the j-th column of `num` in `mat`
-    int[] numToCol = new int[m * n + 1];
-
-    for (int i = 0; i < m; ++i)
-      for (int j = 0; j < n; ++j) {
-        numToRow[mat[i][j]] = i;
-        numToCol[mat[i][j]] = j;
-      }
-
-    for (int i = 0; i < arr.length; ++i) {
-      if (++rows[numToRow[arr[i]]] == n)
-        return i;
-      if (++cols[numToCol[arr[i]]] == m)
-        return i;
+    public int firstCompleteIndex(int[] arr, int[][] mat) {
+        int[] map = new int[arr.length + 1];
+        for (int i = 0; i < arr.length; i++) {
+            map[arr[i]] = i;
+        }
+        int ans = Integer.MAX_VALUE;
+        for (int i = 0; i < mat.length; i++) {
+            int max = 0;
+            for (int j = 0; j < mat[i].length; j++) {
+                max = Math.max(max, map[mat[i][j]]);
+            }
+            ans = Math.min(ans, max);
+        }
+        for (int i = 0; i < mat[0].length; i++) {
+            int max = 0;
+            for (int j = 0; j < mat.length; j++) {
+                max = Math.max(max, map[mat[j][i]]);
+            }
+            ans = Math.min(ans, max);
+        }
+        return ans;
     }
-
-    throw new IllegalArgumentException();
-  }
 }
