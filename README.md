@@ -18,6 +18,7 @@
 | [1025-minimum-cost-for-tickets](https://github.com/Akhtarx10/Leetcode/tree/master/1025-minimum-cost-for-tickets) |
 | [1063-best-sightseeing-pair](https://github.com/Akhtarx10/Leetcode/tree/master/1063-best-sightseeing-pair) |
 | [1185-find-in-mountain-array](https://github.com/Akhtarx10/Leetcode/tree/master/1185-find-in-mountain-array) |
+| [1396-count-servers-that-communicate](https://github.com/Akhtarx10/Leetcode/tree/master/1396-count-servers-that-communicate) |
 | [1421-find-numbers-with-even-number-of-digits](https://github.com/Akhtarx10/Leetcode/tree/master/1421-find-numbers-with-even-number-of-digits) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/Akhtarx10/Leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
 | [1524-string-matching-in-an-array](https://github.com/Akhtarx10/Leetcode/tree/master/1524-string-matching-in-an-array) |
@@ -75,6 +76,7 @@
 |  |
 | ------- |
 | [0169-majority-element](https://github.com/Akhtarx10/Leetcode/tree/master/0169-majority-element) |
+| [1396-count-servers-that-communicate](https://github.com/Akhtarx10/Leetcode/tree/master/1396-count-servers-that-communicate) |
 | [1502-construct-k-palindrome-strings](https://github.com/Akhtarx10/Leetcode/tree/master/1502-construct-k-palindrome-strings) |
 | [2300-construct-string-with-repeat-limit](https://github.com/Akhtarx10/Leetcode/tree/master/2300-construct-string-with-repeat-limit) |
 | [2486-most-frequent-even-element](https://github.com/Akhtarx10/Leetcode/tree/master/2486-most-frequent-even-element) |
@@ -146,6 +148,7 @@
 |  |
 | ------- |
 | [0515-find-largest-value-in-each-tree-row](https://github.com/Akhtarx10/Leetcode/tree/master/0515-find-largest-value-in-each-tree-row) |
+| [1396-count-servers-that-communicate](https://github.com/Akhtarx10/Leetcode/tree/master/1396-count-servers-that-communicate) |
 | [2493-reverse-odd-levels-of-binary-tree](https://github.com/Akhtarx10/Leetcode/tree/master/2493-reverse-odd-levels-of-binary-tree) |
 | [3058-maximum-number-of-k-divisible-components](https://github.com/Akhtarx10/Leetcode/tree/master/3058-maximum-number-of-k-divisible-components) |
 | [3439-find-minimum-diameter-after-merging-two-trees](https://github.com/Akhtarx10/Leetcode/tree/master/3439-find-minimum-diameter-after-merging-two-trees) |
@@ -154,6 +157,7 @@
 | ------- |
 | [0407-trapping-rain-water-ii](https://github.com/Akhtarx10/Leetcode/tree/master/0407-trapping-rain-water-ii) |
 | [0515-find-largest-value-in-each-tree-row](https://github.com/Akhtarx10/Leetcode/tree/master/0515-find-largest-value-in-each-tree-row) |
+| [1396-count-servers-that-communicate](https://github.com/Akhtarx10/Leetcode/tree/master/1396-count-servers-that-communicate) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/Akhtarx10/Leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
 | [1876-map-of-highest-peak](https://github.com/Akhtarx10/Leetcode/tree/master/1876-map-of-highest-peak) |
 | [2493-reverse-odd-levels-of-binary-tree](https://github.com/Akhtarx10/Leetcode/tree/master/2493-reverse-odd-levels-of-binary-tree) |
@@ -231,6 +235,7 @@
 |  |
 | ------- |
 | [0407-trapping-rain-water-ii](https://github.com/Akhtarx10/Leetcode/tree/master/0407-trapping-rain-water-ii) |
+| [1396-count-servers-that-communicate](https://github.com/Akhtarx10/Leetcode/tree/master/1396-count-servers-that-communicate) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/Akhtarx10/Leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
 | [1791-richest-customer-wealth](https://github.com/Akhtarx10/Leetcode/tree/master/1791-richest-customer-wealth) |
 | [1876-map-of-highest-peak](https://github.com/Akhtarx10/Leetcode/tree/master/1876-map-of-highest-peak) |
@@ -248,4 +253,8 @@
 |  |
 | ------- |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/Akhtarx10/Leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
+## Union Find
+|  |
+| ------- |
+| [1396-count-servers-that-communicate](https://github.com/Akhtarx10/Leetcode/tree/master/1396-count-servers-that-communicate) |
 <!---LeetCode Topics End-->
