@@ -1,43 +1,46 @@
+
+
 class Solution {
-  public int[] lexicographicallySmallestArray(int[] nums, int limit) {
-    int[] ans = new int[nums.length];
-    List<List<Pair<Integer, Integer>>> numAndIndexesGroups = new ArrayList<>();
+    public int[] lexicographicallySmallestArray(int[] nums, int limit) {
+        int n = nums.length;
 
-    for (Pair<Integer, Integer> numAndIndex : getNumAndIndexes(nums))
-      if (numAndIndexesGroups.isEmpty() ||
-          numAndIndex.getKey() -
-                  numAndIndexesGroups.get(numAndIndexesGroups.size() - 1)
-                      .get(numAndIndexesGroups.get(numAndIndexesGroups.size() - 1).size() - 1)
-                      .getKey() >
-              limit) {
-        // Start a new group.
-        numAndIndexesGroups.add(new ArrayList<>(List.of(numAndIndex)));
-      } else {
-        // Append to the existing group.
-        numAndIndexesGroups.get(numAndIndexesGroups.size() - 1).add(numAndIndex);
-      }
 
-    for (List<Pair<Integer, Integer>> numAndIndexesGroup : numAndIndexesGroups) {
-      List<Integer> sortedNums = new ArrayList<>();
-      List<Integer> sortedIndices = new ArrayList<>();
-      for (Pair<Integer, Integer> pair : numAndIndexesGroup) {
-        sortedNums.add(pair.getKey());
-        sortedIndices.add(pair.getValue());
-      }
-      sortedIndices.sort(null);
-      for (int i = 0; i < sortedNums.size(); ++i) {
-        ans[sortedIndices.get(i)] = sortedNums.get(i);
-      }
+        class Pair {
+            int index, value;
+            Pair(int index, int value) {
+                this.index = index;
+                this.value = value;
+            }
+        }
+
+        Pair[] pairs = new Pair[n];
+        int[] ans = new int[n];
+        for (int i = 0; i < n; i++) {
+            pairs[i] = new Pair(i, nums[i]);
+        }
+
+
+        Arrays.sort(pairs, (a, b) -> a.value - b.value);
+
+
+        Pair[] ids = Arrays.copyOf(pairs, n);
+
+        int i = 0;
+        while (i < n) {
+            int j = i;
+            i++;
+
+            while (i < n && pairs[i].value - pairs[i - 1].value <= limit) {
+                i++;
+            }
+
+            Arrays.sort(ids, j, i, (a, b) -> a.index - b.index);
+
+            for (int k = j; k < i; k++) {
+                ans[ids[k].index] = pairs[k].value;
+            }
+        }
+
+        return ans;
     }
-
-    return ans;
-  }
-
-  private Pair<Integer, Integer>[] getNumAndIndexes(int[] nums) {
-    Pair<Integer, Integer>[] numAndIndexes = new Pair[nums.length];
-    for (int i = 0; i < nums.length; ++i)
-      numAndIndexes[i] = new Pair<>(nums[i], i);
-    Arrays.sort(numAndIndexes, (a, b) -> a.getKey().compareTo(b.getKey()));
-    return numAndIndexes;
-  }
 }
