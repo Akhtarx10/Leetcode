@@ -150,6 +150,7 @@
 |  |
 | ------- |
 | [0515-find-largest-value-in-each-tree-row](https://github.com/Akhtarx10/Leetcode/tree/master/0515-find-largest-value-in-each-tree-row) |
+| [0820-find-eventual-safe-states](https://github.com/Akhtarx10/Leetcode/tree/master/0820-find-eventual-safe-states) |
 | [1396-count-servers-that-communicate](https://github.com/Akhtarx10/Leetcode/tree/master/1396-count-servers-that-communicate) |
 | [2493-reverse-odd-levels-of-binary-tree](https://github.com/Akhtarx10/Leetcode/tree/master/2493-reverse-odd-levels-of-binary-tree) |
 | [3058-maximum-number-of-k-divisible-components](https://github.com/Akhtarx10/Leetcode/tree/master/3058-maximum-number-of-k-divisible-components) |
@@ -159,6 +160,7 @@
 | ------- |
 | [0407-trapping-rain-water-ii](https://github.com/Akhtarx10/Leetcode/tree/master/0407-trapping-rain-water-ii) |
 | [0515-find-largest-value-in-each-tree-row](https://github.com/Akhtarx10/Leetcode/tree/master/0515-find-largest-value-in-each-tree-row) |
+| [0820-find-eventual-safe-states](https://github.com/Akhtarx10/Leetcode/tree/master/0820-find-eventual-safe-states) |
 | [1396-count-servers-that-communicate](https://github.com/Akhtarx10/Leetcode/tree/master/1396-count-servers-that-communicate) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/Akhtarx10/Leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
 | [1876-map-of-highest-peak](https://github.com/Akhtarx10/Leetcode/tree/master/1876-map-of-highest-peak) |
@@ -191,6 +193,7 @@
 ## Graph
 |  |
 | ------- |
+| [0820-find-eventual-safe-states](https://github.com/Akhtarx10/Leetcode/tree/master/0820-find-eventual-safe-states) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/Akhtarx10/Leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
 | [3439-find-minimum-diameter-after-merging-two-trees](https://github.com/Akhtarx10/Leetcode/tree/master/3439-find-minimum-diameter-after-merging-two-trees) |
 ## Backtracking
@@ -260,4 +263,8 @@
 | ------- |
 | [1396-count-servers-that-communicate](https://github.com/Akhtarx10/Leetcode/tree/master/1396-count-servers-that-communicate) |
 | [3219-make-lexicographically-smallest-array-by-swapping-elements](https://github.com/Akhtarx10/Leetcode/tree/master/3219-make-lexicographically-smallest-array-by-swapping-elements) |
+## Topological Sort
+|  |
+| ------- |
+| [0820-find-eventual-safe-states](https://github.com/Akhtarx10/Leetcode/tree/master/0820-find-eventual-safe-states) |
 <!---LeetCode Topics End-->
