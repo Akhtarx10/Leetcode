@@ -9,6 +9,7 @@
 | [0162-find-peak-element](https://github.com/Akhtarx10/Leetcode/tree/master/0162-find-peak-element) |
 | [0169-majority-element](https://github.com/Akhtarx10/Leetcode/tree/master/0169-majority-element) |
 | [0268-missing-number](https://github.com/Akhtarx10/Leetcode/tree/master/0268-missing-number) |
+| [0287-find-the-duplicate-number](https://github.com/Akhtarx10/Leetcode/tree/master/0287-find-the-duplicate-number) |
 | [0407-trapping-rain-water-ii](https://github.com/Akhtarx10/Leetcode/tree/master/0407-trapping-rain-water-ii) |
 | [0448-find-all-numbers-disappeared-in-an-array](https://github.com/Akhtarx10/Leetcode/tree/master/0448-find-all-numbers-disappeared-in-an-array) |
 | [0494-target-sum](https://github.com/Akhtarx10/Leetcode/tree/master/0494-target-sum) |
@@ -188,6 +189,7 @@
 | [0034-find-first-and-last-position-of-element-in-sorted-array](https://github.com/Akhtarx10/Leetcode/tree/master/0034-find-first-and-last-position-of-element-in-sorted-array) |
 | [0162-find-peak-element](https://github.com/Akhtarx10/Leetcode/tree/master/0162-find-peak-element) |
 | [0268-missing-number](https://github.com/Akhtarx10/Leetcode/tree/master/0268-missing-number) |
+| [0287-find-the-duplicate-number](https://github.com/Akhtarx10/Leetcode/tree/master/0287-find-the-duplicate-number) |
 | [0745-find-smallest-letter-greater-than-target](https://github.com/Akhtarx10/Leetcode/tree/master/0745-find-smallest-letter-greater-than-target) |
 | [0882-peak-index-in-a-mountain-array](https://github.com/Akhtarx10/Leetcode/tree/master/0882-peak-index-in-a-mountain-array) |
 | [1185-find-in-mountain-array](https://github.com/Akhtarx10/Leetcode/tree/master/1185-find-in-mountain-array) |
@@ -226,6 +228,7 @@
 |  |
 | ------- |
 | [0268-missing-number](https://github.com/Akhtarx10/Leetcode/tree/master/0268-missing-number) |
+| [0287-find-the-duplicate-number](https://github.com/Akhtarx10/Leetcode/tree/master/0287-find-the-duplicate-number) |
 | [2059-unique-length-3-palindromic-subsequences](https://github.com/Akhtarx10/Leetcode/tree/master/2059-unique-length-3-palindromic-subsequences) |
 | [2509-minimize-xor](https://github.com/Akhtarx10/Leetcode/tree/master/2509-minimize-xor) |
 | [2533-bitwise-xor-of-all-pairings](https://github.com/Akhtarx10/Leetcode/tree/master/2533-bitwise-xor-of-all-pairings) |
@@ -282,4 +285,8 @@
 | [0820-find-eventual-safe-states](https://github.com/Akhtarx10/Leetcode/tree/master/0820-find-eventual-safe-states) |
 | [1558-course-schedule-iv](https://github.com/Akhtarx10/Leetcode/tree/master/1558-course-schedule-iv) |
 | [2246-maximum-employees-to-be-invited-to-a-meeting](https://github.com/Akhtarx10/Leetcode/tree/master/2246-maximum-employees-to-be-invited-to-a-meeting) |
+## Two Pointers
+|  |
+| ------- |
+| [0287-find-the-duplicate-number](https://github.com/Akhtarx10/Leetcode/tree/master/0287-find-the-duplicate-number) |
 <!---LeetCode Topics End-->
