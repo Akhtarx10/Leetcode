@@ -14,6 +14,7 @@
 | [0442-find-all-duplicates-in-an-array](https://github.com/Akhtarx10/Leetcode/tree/master/0442-find-all-duplicates-in-an-array) |
 | [0448-find-all-numbers-disappeared-in-an-array](https://github.com/Akhtarx10/Leetcode/tree/master/0448-find-all-numbers-disappeared-in-an-array) |
 | [0494-target-sum](https://github.com/Akhtarx10/Leetcode/tree/master/0494-target-sum) |
+| [0645-set-mismatch](https://github.com/Akhtarx10/Leetcode/tree/master/0645-set-mismatch) |
 | [0689-maximum-sum-of-3-non-overlapping-subarrays](https://github.com/Akhtarx10/Leetcode/tree/master/0689-maximum-sum-of-3-non-overlapping-subarrays) |
 | [0745-find-smallest-letter-greater-than-target](https://github.com/Akhtarx10/Leetcode/tree/master/0745-find-smallest-letter-greater-than-target) |
 | [0780-max-chunks-to-make-sorted](https://github.com/Akhtarx10/Leetcode/tree/master/0780-max-chunks-to-make-sorted) |
@@ -67,6 +68,7 @@
 | [0268-missing-number](https://github.com/Akhtarx10/Leetcode/tree/master/0268-missing-number) |
 | [0442-find-all-duplicates-in-an-array](https://github.com/Akhtarx10/Leetcode/tree/master/0442-find-all-duplicates-in-an-array) |
 | [0448-find-all-numbers-disappeared-in-an-array](https://github.com/Akhtarx10/Leetcode/tree/master/0448-find-all-numbers-disappeared-in-an-array) |
+| [0645-set-mismatch](https://github.com/Akhtarx10/Leetcode/tree/master/0645-set-mismatch) |
 | [0952-word-subsets](https://github.com/Akhtarx10/Leetcode/tree/master/0952-word-subsets) |
 | [1502-construct-k-palindrome-strings](https://github.com/Akhtarx10/Leetcode/tree/master/1502-construct-k-palindrome-strings) |
 | [2059-unique-length-3-palindromic-subsequences](https://github.com/Akhtarx10/Leetcode/tree/master/2059-unique-length-3-palindromic-subsequences) |
@@ -80,6 +82,7 @@
 | ------- |
 | [0169-majority-element](https://github.com/Akhtarx10/Leetcode/tree/master/0169-majority-element) |
 | [0268-missing-number](https://github.com/Akhtarx10/Leetcode/tree/master/0268-missing-number) |
+| [0645-set-mismatch](https://github.com/Akhtarx10/Leetcode/tree/master/0645-set-mismatch) |
 | [0780-max-chunks-to-make-sorted](https://github.com/Akhtarx10/Leetcode/tree/master/0780-max-chunks-to-make-sorted) |
 | [3219-make-lexicographically-smallest-array-by-swapping-elements](https://github.com/Akhtarx10/Leetcode/tree/master/3219-make-lexicographically-smallest-array-by-swapping-elements) |
 ## Counting
@@ -231,6 +234,7 @@
 | ------- |
 | [0268-missing-number](https://github.com/Akhtarx10/Leetcode/tree/master/0268-missing-number) |
 | [0287-find-the-duplicate-number](https://github.com/Akhtarx10/Leetcode/tree/master/0287-find-the-duplicate-number) |
+| [0645-set-mismatch](https://github.com/Akhtarx10/Leetcode/tree/master/0645-set-mismatch) |
 | [2059-unique-length-3-palindromic-subsequences](https://github.com/Akhtarx10/Leetcode/tree/master/2059-unique-length-3-palindromic-subsequences) |
 | [2509-minimize-xor](https://github.com/Akhtarx10/Leetcode/tree/master/2509-minimize-xor) |
 | [2533-bitwise-xor-of-all-pairings](https://github.com/Akhtarx10/Leetcode/tree/master/2533-bitwise-xor-of-all-pairings) |
