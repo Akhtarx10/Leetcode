@@ -1,33 +1,41 @@
 class Solution {
-    private int[][] grid;
-    private int m;
-    private int n;
-
     public int findMaxFish(int[][] grid) {
-        m = grid.length;
-        n = grid[0].length;
-        this.grid = grid;
-        int ans = 0;
-        for (int i = 0; i < m; ++i) {
-            for (int j = 0; j < n; ++j) {
+
+        int maxFish = 0;
+        
+        for (int i = 0; i < grid.length; i++){
+            for(int j = 0; j < grid[i].length; j++){
+                
                 if (grid[i][j] > 0) {
-                    ans = Math.max(ans, dfs(i, j));
-                }
+                
+                    int fishInRegion = bfs(grid, i, j);
+                
+                    maxFish = Math.max(maxFish, fishInRegion);
+            }
+                
             }
         }
-        return ans;
+        
+        return maxFish;
+        
     }
 
-    private int dfs(int i, int j) {
-        int cnt = grid[i][j];
-        grid[i][j] = 0;
-        int[] dirs = {-1, 0, 1, 0, -1};
-        for (int k = 0; k < 4; ++k) {
-            int x = i + dirs[k], y = j + dirs[k + 1];
-            if (x >= 0 && x < m && y >= 0 && y < n && grid[x][y] > 0) {
-                cnt += dfs(x, y);
-            }
+    public int bfs(int[][] grid, int i, int j){
+        
+        if (i < 0 || i >= grid.length || j < 0 || j >= grid[i].length || grid[i][j] == 0){
+            return 0;
         }
-        return cnt;
+        
+        int fish = grid[i][j];
+
+    
+        grid[i][j] = 0;
+        fish += bfs(grid, i + 1, j);
+        fish += bfs(grid, i - 1, j);
+        fish += bfs(grid, i, j + 1);
+        fish += bfs(grid, i, j - 1);
+
+        
+        return fish;
     }
 }
