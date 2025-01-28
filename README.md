@@ -5,6 +5,7 @@
 |  |
 | ------- |
 | [0034-find-first-and-last-position-of-element-in-sorted-array](https://github.com/Akhtarx10/Leetcode/tree/master/0034-find-first-and-last-position-of-element-in-sorted-array) |
+| [0041-first-missing-positive](https://github.com/Akhtarx10/Leetcode/tree/master/0041-first-missing-positive) |
 | [0053-maximum-subarray](https://github.com/Akhtarx10/Leetcode/tree/master/0053-maximum-subarray) |
 | [0162-find-peak-element](https://github.com/Akhtarx10/Leetcode/tree/master/0162-find-peak-element) |
 | [0169-majority-element](https://github.com/Akhtarx10/Leetcode/tree/master/0169-majority-element) |
@@ -65,6 +66,7 @@
 ## Hash Table
 |  |
 | ------- |
+| [0041-first-missing-positive](https://github.com/Akhtarx10/Leetcode/tree/master/0041-first-missing-positive) |
 | [0169-majority-element](https://github.com/Akhtarx10/Leetcode/tree/master/0169-majority-element) |
 | [0268-missing-number](https://github.com/Akhtarx10/Leetcode/tree/master/0268-missing-number) |
 | [0442-find-all-duplicates-in-an-array](https://github.com/Akhtarx10/Leetcode/tree/master/0442-find-all-duplicates-in-an-array) |
