@@ -1,22 +1,28 @@
 class Solution {
     public boolean areAlmostEqual(String s1, String s2) {
-        if (s1.equals(s2)) {
-            return true;
-        }
-
-        List<Integer> diffIndices = new ArrayList<>();
-        for (int i = 0; i < s1.length(); i++) {
-            if (s1.charAt(i) != s2.charAt(i)) {
-                diffIndices.add(i);
+        int n1 = s1.length(); 
+        int n2 = s2.length();
+        if(n1 != n2) return false;
+        if(s1.equals(s2))return true;
+        int i = 0; int j = 0;
+        int alag = 0;
+        for(int k = 0; k<n1; k++){
+             char ch1 = s1.charAt(k);
+            char ch2 = s2.charAt(k);
+            if(ch1 != ch2){
+                alag++;
+            if(alag > 2)return false;
+            else if(alag == 1){
+                i = k;
+            }else {
+                j = k;
+            }
             }
         }
+       if(s1.charAt(i) == s2.charAt(j) && s1.charAt(j) == s2.charAt(i)) return true;
 
-        if (diffIndices.size() == 2) {
-            int i = diffIndices.get(0), j = diffIndices.get(1);
-            return s1.charAt(i) == s2.charAt(j) && s1.charAt(j) == s2.charAt(i);
-        }
+        else return false;
 
-        return false;
     
         
     }
