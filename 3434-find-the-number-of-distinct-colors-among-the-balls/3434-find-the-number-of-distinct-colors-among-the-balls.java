@@ -1,17 +1,25 @@
 class Solution {
     public int[] queryResults(int limit, int[][] queries) {
-        Map<Integer, Integer> g = new HashMap<>();
-        Map<Integer, Integer> cnt = new HashMap<>();
-        int m = queries.length;
-        int[] ans = new int[m];
-        for (int i = 0; i < m; ++i) {
-            int x = queries[i][0], y = queries[i][1];
-            cnt.merge(y, 1, Integer::sum);
-            if (g.containsKey(x) && cnt.merge(g.get(x), -1, Integer::sum) == 0) {
-                cnt.remove(g.get(x));
+        Map<Integer,Integer> node = new HashMap<>();
+        Map<Integer,Integer> color = new HashMap<>();
+        int ans[]=new int[queries.length];
+        for(int i=0;i<queries.length;i++){
+            int it[]=queries[i];
+            if(node.containsKey(it[0])){
+                if(node.get(it[0])==it[1]) {
+                    ans[i]=color.size();continue;
+                }
+                else if (color.get(node.get(it[0]))<=1) color.remove(node.get(it[0]));
+                else
+                color.put(node.get(it[0]),color.get(node.get(it[0]))-1);
+                node.put(it[0],it[1]);
+                color.put(it[1],color.getOrDefault(it[1],0)+1);
             }
-            g.put(x, y);
-            ans[i] = cnt.size();
+            else{
+                node.put(it[0],it[1]);
+                color.put(it[1],color.getOrDefault(it[1],0)+1);
+            }
+            ans[i]=color.size();
         }
         return ans;
     }
