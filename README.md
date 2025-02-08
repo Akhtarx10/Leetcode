@@ -83,6 +83,7 @@
 | [1915-check-if-one-string-swap-can-make-strings-equal](https://github.com/Akhtarx10/Leetcode/tree/master/1915-check-if-one-string-swap-can-make-strings-equal) |
 | [2059-unique-length-3-palindromic-subsequences](https://github.com/Akhtarx10/Leetcode/tree/master/2059-unique-length-3-palindromic-subsequences) |
 | [2300-construct-string-with-repeat-limit](https://github.com/Akhtarx10/Leetcode/tree/master/2300-construct-string-with-repeat-limit) |
+| [2434-design-a-number-container-system](https://github.com/Akhtarx10/Leetcode/tree/master/2434-design-a-number-container-system) |
 | [2486-most-frequent-even-element](https://github.com/Akhtarx10/Leetcode/tree/master/2486-most-frequent-even-element) |
 | [2685-first-completely-painted-row-or-column](https://github.com/Akhtarx10/Leetcode/tree/master/2685-first-completely-painted-row-or-column) |
 | [2766-find-the-prefix-common-array-of-two-arrays](https://github.com/Akhtarx10/Leetcode/tree/master/2766-find-the-prefix-common-array-of-two-arrays) |
@@ -119,6 +120,7 @@
 | [0407-trapping-rain-water-ii](https://github.com/Akhtarx10/Leetcode/tree/master/0407-trapping-rain-water-ii) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/Akhtarx10/Leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
 | [2300-construct-string-with-repeat-limit](https://github.com/Akhtarx10/Leetcode/tree/master/2300-construct-string-with-repeat-limit) |
+| [2434-design-a-number-container-system](https://github.com/Akhtarx10/Leetcode/tree/master/2434-design-a-number-container-system) |
 | [3181-find-building-where-alice-and-bob-can-meet](https://github.com/Akhtarx10/Leetcode/tree/master/3181-find-building-where-alice-and-bob-can-meet) |
 | [3555-final-array-state-after-k-multiplication-operations-i](https://github.com/Akhtarx10/Leetcode/tree/master/3555-final-array-state-after-k-multiplication-operations-i) |
 ## Simulation
@@ -325,4 +327,12 @@
 |  |
 | ------- |
 | [0287-find-the-duplicate-number](https://github.com/Akhtarx10/Leetcode/tree/master/0287-find-the-duplicate-number) |
+## Design
+|  |
+| ------- |
+| [2434-design-a-number-container-system](https://github.com/Akhtarx10/Leetcode/tree/master/2434-design-a-number-container-system) |
+## Ordered Set
+|  |
+| ------- |
+| [2434-design-a-number-container-system](https://github.com/Akhtarx10/Leetcode/tree/master/2434-design-a-number-container-system) |
 <!---LeetCode Topics End-->
