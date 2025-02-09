@@ -1,16 +1,11 @@
 class Solution {
     public long countBadPairs(int[] nums) {
-        int n = nums.length;
-        long totalPairs = (long) n * (n - 1) / 2;
-        HashMap<Integer, Long> freq = new HashMap<>();
-        long goodPairs = 0;
-
-        for (int i = 0; i < n; i++) {
-            int key = nums[i] - i;
-            goodPairs += freq.getOrDefault(key, 0L);
-            freq.put(key, freq.getOrDefault(key, 0L) + 1);
+         Map<Integer, Integer> bag = new HashMap<>();
+        long count = 0;
+        for (int i = 0; i < nums.length; i++) {
+            count += -1 + bag.merge(nums[i] - i, 1, Integer::sum);
         }
-
-        return totalPairs - goodPairs;
+        int len = nums.length;
+        return 1L * len * (len - 1) / 2 - count;
     }
 }
