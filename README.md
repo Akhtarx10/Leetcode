@@ -20,6 +20,7 @@
 | [0745-find-smallest-letter-greater-than-target](https://github.com/Akhtarx10/Leetcode/tree/master/0745-find-smallest-letter-greater-than-target) |
 | [0780-max-chunks-to-make-sorted](https://github.com/Akhtarx10/Leetcode/tree/master/0780-max-chunks-to-make-sorted) |
 | [0854-making-a-large-island](https://github.com/Akhtarx10/Leetcode/tree/master/0854-making-a-large-island) |
+| [0861-flipping-an-image](https://github.com/Akhtarx10/Leetcode/tree/master/0861-flipping-an-image) |
 | [0882-peak-index-in-a-mountain-array](https://github.com/Akhtarx10/Leetcode/tree/master/0882-peak-index-in-a-mountain-array) |
 | [0952-word-subsets](https://github.com/Akhtarx10/Leetcode/tree/master/0952-word-subsets) |
 | [1025-minimum-cost-for-tickets](https://github.com/Akhtarx10/Leetcode/tree/master/1025-minimum-cost-for-tickets) |
@@ -130,6 +131,7 @@
 ## Simulation
 |  |
 | ------- |
+| [0861-flipping-an-image](https://github.com/Akhtarx10/Leetcode/tree/master/0861-flipping-an-image) |
 | [3434-find-the-number-of-distinct-colors-among-the-balls](https://github.com/Akhtarx10/Leetcode/tree/master/3434-find-the-number-of-distinct-colors-among-the-balls) |
 | [3447-clear-digits](https://github.com/Akhtarx10/Leetcode/tree/master/3447-clear-digits) |
 | [3555-final-array-state-after-k-multiplication-operations-i](https://github.com/Akhtarx10/Leetcode/tree/master/3555-final-array-state-after-k-multiplication-operations-i) |
@@ -268,6 +270,7 @@
 | [0268-missing-number](https://github.com/Akhtarx10/Leetcode/tree/master/0268-missing-number) |
 | [0287-find-the-duplicate-number](https://github.com/Akhtarx10/Leetcode/tree/master/0287-find-the-duplicate-number) |
 | [0645-set-mismatch](https://github.com/Akhtarx10/Leetcode/tree/master/0645-set-mismatch) |
+| [0861-flipping-an-image](https://github.com/Akhtarx10/Leetcode/tree/master/0861-flipping-an-image) |
 | [2059-unique-length-3-palindromic-subsequences](https://github.com/Akhtarx10/Leetcode/tree/master/2059-unique-length-3-palindromic-subsequences) |
 | [2509-minimize-xor](https://github.com/Akhtarx10/Leetcode/tree/master/2509-minimize-xor) |
 | [2533-bitwise-xor-of-all-pairings](https://github.com/Akhtarx10/Leetcode/tree/master/2533-bitwise-xor-of-all-pairings) |
@@ -296,6 +299,7 @@
 | ------- |
 | [0407-trapping-rain-water-ii](https://github.com/Akhtarx10/Leetcode/tree/master/0407-trapping-rain-water-ii) |
 | [0854-making-a-large-island](https://github.com/Akhtarx10/Leetcode/tree/master/0854-making-a-large-island) |
+| [0861-flipping-an-image](https://github.com/Akhtarx10/Leetcode/tree/master/0861-flipping-an-image) |
 | [1396-count-servers-that-communicate](https://github.com/Akhtarx10/Leetcode/tree/master/1396-count-servers-that-communicate) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/Akhtarx10/Leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
 | [1791-richest-customer-wealth](https://github.com/Akhtarx10/Leetcode/tree/master/1791-richest-customer-wealth) |
@@ -334,6 +338,7 @@
 |  |
 | ------- |
 | [0287-find-the-duplicate-number](https://github.com/Akhtarx10/Leetcode/tree/master/0287-find-the-duplicate-number) |
+| [0861-flipping-an-image](https://github.com/Akhtarx10/Leetcode/tree/master/0861-flipping-an-image) |
 ## Design
 |  |
 | ------- |
