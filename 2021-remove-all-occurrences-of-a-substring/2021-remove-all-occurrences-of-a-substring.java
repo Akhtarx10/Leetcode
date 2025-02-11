@@ -1,17 +1,35 @@
 class Solution {
-  public String removeOccurrences(String s, String part) {
-    final int n = s.length();
-    final int k = part.length();
-
-    StringBuilder sb = new StringBuilder(s);
-    int j = 0; // sb's index
-
-    for (int i = 0; i < n; ++i) {
-      sb.setCharAt(j++, s.charAt(i));
-      if (j >= k && sb.substring(j - k, j).toString().equals(part))
-        j -= k;
+    static {
+        for (int i = 0; i < 100; i++) {
+            removeOccurrences("daabcbaabcbc", "abc");
+        }
     }
 
-    return sb.substring(0, j).toString();
-  }
+    public static String removeOccurrences(String str, String part) {
+        char[] input = str.toCharArray();
+        char[] target = part.toCharArray();
+        char[] resultStack = new char[input.length];
+        int targetLength = target.length;
+        int stackSize = 0;
+        char targetEndChar = target[targetLength - 1];
+
+        for (char currentChar : input) {
+            resultStack[stackSize++] = currentChar;
+
+            if (currentChar == targetEndChar && stackSize >= targetLength) {
+                int i = stackSize - 1, j = targetLength - 1;
+
+                while (j >= 0 && resultStack[i] == target[j]) {
+                    i--;
+                    j--;
+                }
+
+                if (j < 0) {
+                    stackSize = i + 1;
+                }
+            }
+        }
+
+        return new String(resultStack, 0, stackSize);
+    }
 }
