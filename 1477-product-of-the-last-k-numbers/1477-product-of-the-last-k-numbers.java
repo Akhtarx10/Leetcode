@@ -1,21 +1,28 @@
 class ProductOfNumbers {
-  public ProductOfNumbers() {
-    prefix = new ArrayList<>(List.of(1));
-  }
 
-  public void add(int num) {
-    if (num == 0)
-      prefix = new ArrayList<>(List.of(1));
-    else
-      prefix.add(prefix.get(prefix.size() - 1) * num);
-  }
+    ArrayList<Integer>list=new ArrayList<>();
+    int prod=1;
 
-  public int getProduct(int k) {
-    return k >= prefix.size() ? 0
-                              : prefix.get(prefix.size() - 1) / prefix.get(prefix.size() - k - 1);
-  }
+    public ProductOfNumbers() {
+    }
+    
+    public void add(int num) {
 
-  private List<Integer> prefix = new ArrayList<>();
+        if(num==0){
+            list=new ArrayList<>();
+            prod=1;
+            return;
+        }
+        prod=prod*num; 
+        list.add(prod);       
+    }
+    
+    public int getProduct(int k) {
+        if(list.size()<k)return 0;
+        int ans=list.get(list.size()-1);
+        if(list.size()==k)return ans;
+        return ans/list.get(list.size()-1-k);
+    }
 }
 
 /**
