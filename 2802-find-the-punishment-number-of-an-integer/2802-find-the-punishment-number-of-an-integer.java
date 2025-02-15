@@ -1,30 +1,16 @@
 class Solution {
-    public int punishmentNumber(int n) {
-        int ans = 0;
-        for (int i = 1; i <= n; ++i) {
-            int x = i * i;
-            if (check(x + "", 0, i)) {
-                ans += x;
-            }
-        }
-        return ans;
-    }
+    int arr[] = { 1, 9, 10, 36, 45, 55, 82, 91, 99, 100, 235, 297, 369, 370, 379, 414, 657, 675, 703, 756, 792, 909,
+            918, 945, 964, 990, 991, 999, 1000 };
 
-    private boolean check(String s, int i, int x) {
-        int m = s.length();
-        if (i >= m) {
-            return x == 0;
-        }
-        int y = 0;
-        for (int j = i; j < m; ++j) {
-            y = y * 10 + (s.charAt(j) - '0');
-            if (y > x) {
+    public int punishmentNumber(int n) {
+        int res = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] <= n) {
+                res += arr[i] * arr[i];
+            } else {
                 break;
             }
-            if (check(s, j + 1, x - y)) {
-                return true;
-            }
         }
-        return false;
+        return res;
     }
 }
