@@ -1,21 +1,22 @@
-
-
 class Solution {
+    int n2;
+    
     public String getHappyString(int n, int k) {
-        List<String> result = new ArrayList<>();
-        generateHappyStrings(n, "", result);
-        return result.size() >= k ? result.get(k - 1) : "";
+        n2 = n;
+        return dfs(new StringBuilder(), n, k);
     }
 
-    private void generateHappyStrings(int n, String current, List<String> result) {
-        if (current.length() == n) {
-            result.add(current);
-            return;
+    private String dfs(StringBuilder prefix, int n, int k) {
+        if (n == 0) return prefix.toString();
+        
+        for (char c = 'a'; c <= 'c'; c++) {
+            if (prefix.length() > 0 && c == prefix.charAt(prefix.length() - 1)) continue;
+            
+            int cnt = 1 << (n2 - prefix.length() - 1);
+            if (cnt >= k) return dfs(prefix.append(c), n - 1, k);
+            
+            k -= cnt;
         }
-        for (char c : new char[]{'a', 'b', 'c'}) {
-            if (current.isEmpty() || current.charAt(current.length() - 1) != c) {
-                generateHappyStrings(n, current + c, result);
-            }
-        }
+        return "";
     }
 }
