@@ -14,25 +14,29 @@
  * }
  */
 class FindElements {
-  public FindElements(TreeNode root) {
-    dfs(root, 0);
-  }
+    BitSet recoveredValues;
 
-  public boolean find(int target) {
-    return vals.contains(target);
-  }
+    public FindElements(TreeNode root) {
+        root.val = 0;
+        recoveredValues = new BitSet();
+        recoverTree(root);
+    }
+    
+    public boolean find(int target) {
+        return recoveredValues.get(target);
+    }
 
-  private Set<Integer> vals = new HashSet<>();
-
-  private void dfs(TreeNode root, int val) {
-    if (root == null)
-      return;
-
-    root.val = val;
-    vals.add(val);
-    dfs(root.left, val * 2 + 1);
-    dfs(root.right, val * 2 + 2);
-  }
+    private void recoverTree(TreeNode root) {
+        recoveredValues.set(root.val);
+        if(root.left != null) {
+            root.left.val = root.val * 2 + 1;
+            recoverTree(root.left);
+        }
+        if(root.right != null) {
+            root.right.val = root.val * 2 + 2;
+            recoverTree(root.right);
+        }
+    }
 }
 
 /**
