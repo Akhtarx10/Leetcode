@@ -14,26 +14,48 @@
  * }
  */
 class Solution {
-  public TreeNode recoverFromPreorder(String traversal) {
-    return recoverFromPreorder(traversal, 0);
-  }
+    private String s;
+    private int idx, level;
 
-  private int i = 0;
+    public TreeNode recoverFromPreorder(final String traversal) {
+        this.s = traversal;
+        this.idx = 0;
+        this.level = 0;
 
-  private TreeNode recoverFromPreorder(final String traversal, int depth) {
-    int nDashes = 0;
-    while (i + nDashes < traversal.length() && traversal.charAt(i + nDashes) == '-')
-      ++nDashes;
-    if (nDashes != depth)
-      return null;
+        TreeNode node = new TreeNode(-1);
 
-    i += depth;
-    final int start = i;
-    while (i < traversal.length() && Character.isDigit(traversal.charAt(i)))
-      ++i;
+        this.helper(node, 0);
 
-    return new TreeNode(Integer.valueOf(traversal.substring(start, i)),
-                        recoverFromPreorder(traversal, depth + 1),
-                        recoverFromPreorder(traversal, depth + 1));
-  }
+        return node.left;
+    }
+
+    private void helper(final TreeNode parent, final int lvl) {
+        while(this.idx < this.s.length() && lvl == level) {
+            int num = 0;
+
+            // Get value
+            while(this.idx < this.s.length() && Character.isDigit(this.s.charAt(this.idx))) {
+                num *= 10;
+                num += this.s.charAt(this.idx++) - '0';
+            }
+
+            // Add child
+            final TreeNode node = new TreeNode(num);
+
+            if(parent.left == null)
+                parent.left = node;
+            else
+                parent.right = node;
+
+            this.level = 0;
+
+            // Get next level
+            while(this.idx < this.s.length() && this.s.charAt(this.idx) == '-') {
+                this.level++;
+                this.idx++;
+            }
+
+            this.helper(node, lvl + 1);
+        }
+    }
 }
