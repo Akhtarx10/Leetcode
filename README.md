@@ -22,6 +22,7 @@
 | [0854-making-a-large-island](https://github.com/Akhtarx10/Leetcode/tree/master/0854-making-a-large-island) |
 | [0861-flipping-an-image](https://github.com/Akhtarx10/Leetcode/tree/master/0861-flipping-an-image) |
 | [0882-peak-index-in-a-mountain-array](https://github.com/Akhtarx10/Leetcode/tree/master/0882-peak-index-in-a-mountain-array) |
+| [0925-construct-binary-tree-from-preorder-and-postorder-traversal](https://github.com/Akhtarx10/Leetcode/tree/master/0925-construct-binary-tree-from-preorder-and-postorder-traversal) |
 | [0952-word-subsets](https://github.com/Akhtarx10/Leetcode/tree/master/0952-word-subsets) |
 | [1025-minimum-cost-for-tickets](https://github.com/Akhtarx10/Leetcode/tree/master/1025-minimum-cost-for-tickets) |
 | [1063-best-sightseeing-pair](https://github.com/Akhtarx10/Leetcode/tree/master/1063-best-sightseeing-pair) |
@@ -64,6 +65,7 @@
 | ------- |
 | [0053-maximum-subarray](https://github.com/Akhtarx10/Leetcode/tree/master/0053-maximum-subarray) |
 | [0169-majority-element](https://github.com/Akhtarx10/Leetcode/tree/master/0169-majority-element) |
+| [0925-construct-binary-tree-from-preorder-and-postorder-traversal](https://github.com/Akhtarx10/Leetcode/tree/master/0925-construct-binary-tree-from-preorder-and-postorder-traversal) |
 ## Dynamic Programming
 |  |
 | ------- |
@@ -83,6 +85,7 @@
 | [0442-find-all-duplicates-in-an-array](https://github.com/Akhtarx10/Leetcode/tree/master/0442-find-all-duplicates-in-an-array) |
 | [0448-find-all-numbers-disappeared-in-an-array](https://github.com/Akhtarx10/Leetcode/tree/master/0448-find-all-numbers-disappeared-in-an-array) |
 | [0645-set-mismatch](https://github.com/Akhtarx10/Leetcode/tree/master/0645-set-mismatch) |
+| [0925-construct-binary-tree-from-preorder-and-postorder-traversal](https://github.com/Akhtarx10/Leetcode/tree/master/0925-construct-binary-tree-from-preorder-and-postorder-traversal) |
 | [0952-word-subsets](https://github.com/Akhtarx10/Leetcode/tree/master/0952-word-subsets) |
 | [1160-letter-tile-possibilities](https://github.com/Akhtarx10/Leetcode/tree/master/1160-letter-tile-possibilities) |
 | [1364-tuple-with-same-product](https://github.com/Akhtarx10/Leetcode/tree/master/1364-tuple-with-same-product) |
@@ -206,6 +209,7 @@
 |  |
 | ------- |
 | [0515-find-largest-value-in-each-tree-row](https://github.com/Akhtarx10/Leetcode/tree/master/0515-find-largest-value-in-each-tree-row) |
+| [0925-construct-binary-tree-from-preorder-and-postorder-traversal](https://github.com/Akhtarx10/Leetcode/tree/master/0925-construct-binary-tree-from-preorder-and-postorder-traversal) |
 | [1093-recover-a-tree-from-preorder-traversal](https://github.com/Akhtarx10/Leetcode/tree/master/1093-recover-a-tree-from-preorder-traversal) |
 | [1387-find-elements-in-a-contaminated-binary-tree](https://github.com/Akhtarx10/Leetcode/tree/master/1387-find-elements-in-a-contaminated-binary-tree) |
 | [2493-reverse-odd-levels-of-binary-tree](https://github.com/Akhtarx10/Leetcode/tree/master/2493-reverse-odd-levels-of-binary-tree) |
@@ -250,6 +254,7 @@
 |  |
 | ------- |
 | [0515-find-largest-value-in-each-tree-row](https://github.com/Akhtarx10/Leetcode/tree/master/0515-find-largest-value-in-each-tree-row) |
+| [0925-construct-binary-tree-from-preorder-and-postorder-traversal](https://github.com/Akhtarx10/Leetcode/tree/master/0925-construct-binary-tree-from-preorder-and-postorder-traversal) |
 | [1093-recover-a-tree-from-preorder-traversal](https://github.com/Akhtarx10/Leetcode/tree/master/1093-recover-a-tree-from-preorder-traversal) |
 | [1387-find-elements-in-a-contaminated-binary-tree](https://github.com/Akhtarx10/Leetcode/tree/master/1387-find-elements-in-a-contaminated-binary-tree) |
 | [2493-reverse-odd-levels-of-binary-tree](https://github.com/Akhtarx10/Leetcode/tree/master/2493-reverse-odd-levels-of-binary-tree) |
