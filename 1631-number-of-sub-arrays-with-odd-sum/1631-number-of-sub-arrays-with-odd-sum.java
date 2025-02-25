@@ -1,13 +1,11 @@
 class Solution {
-    public int numOfSubarrays(int[] arr) {
-        final int mod = (int) 1e9 + 7;
-        int[] cnt = {1, 0};
-        int ans = 0, s = 0;
-        for (int x : arr) {
-            s += x;
-            ans = (ans + cnt[s & 1 ^ 1]) % mod;
-            ++cnt[s & 1];
+        public int numOfSubarrays(int[] arr) {
+        long oddCount = 0, prefixSum = 0;
+        for (int a : arr) {
+            prefixSum += a;
+            oddCount += prefixSum % 2;
         }
-        return ans;
+        oddCount += (arr.length - oddCount) * oddCount;
+        return (int)(oddCount % 1_000_000_007);       
     }
 }
