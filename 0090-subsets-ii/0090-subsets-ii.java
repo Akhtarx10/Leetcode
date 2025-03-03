@@ -9,6 +9,8 @@ class Solution {
     public void findsubset(int idx,int[] nums,List<Integer> ds,List<List<Integer>> ansList){
         ansList.add(new ArrayList<>(ds));
 
+        if(idx == nums.length)
+            return;
         for(int i=idx;i<nums.length;i++){
             if(i !=idx && nums[i] == nums[i-1]){
                 continue;
