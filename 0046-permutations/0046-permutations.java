@@ -10,7 +10,7 @@ class Solution {
             for(int num : nums){
                 ds.add(num);
             }
-            ans.add(new ArrayList<>(ds));
+            ans.add(ds);
             return;
         }
 
