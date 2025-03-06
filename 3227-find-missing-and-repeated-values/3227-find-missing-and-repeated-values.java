@@ -1,29 +1,23 @@
 class Solution {
-    public int[] findMissingAndRepeatedValues(int[][] grid) {
-        int n = grid.length;
-        int[] nums = new int[n * n];
-        int index = 0;
-        
-        for (int[] row : grid) {
-            for (int num : row) {
-                nums[index++] = num;
+    public int[] findMissingAndRepeatedValues(int[][] g) {
+         long n = g.length; 
+         
+        long SN = ((n*n) * ((n*n) + 1)) / 2;
+        long S2N = ((n*n) * ((n*n) + 1) * (2 * (n*n) + 1)) / 6;
+        long S = 0, S2 = 0;
+        for (int i = 0; i < n; i++) {
+            for(int j=0;j<n;j++){
+            S += g[i][j];
+            S2 += (long)g[i][j] * (long)g[i][j];
             }
         }
-        
-        Map<Integer, Integer> count = new HashMap<>();
-        for (int num : nums) {
-            count.put(num, count.getOrDefault(num, 0) + 1);
-        }
-        
-        int repeated = -1, missing = -1;
-        for (int i = 1; i <= n * n; i++) {
-            if (count.getOrDefault(i, 0) == 2) {
-                repeated = i;
-            } else if (!count.containsKey(i)) {
-                missing = i;
-            }
-        }
-        
-        return new int[]{repeated, missing};
+        long val1 = S - SN;
+        long val2 = S2 - S2N;
+        val2 = val2 / val1;
+        long x = (val1 + val2) / 2;
+        long y = x - val1;
+
+        int[] ans = {(int)x, (int)y};
+        return ans;
     }
 }
