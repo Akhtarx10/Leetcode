@@ -1,27 +1,60 @@
 class Solution {
-    public int[] closestPrimes(int left, int right) {
-        int[] ans = {-1, -1};
-        int prevPrime = -1, minDiff = Integer.MAX_VALUE;
 
-        for (int i = left; i <= right; i++) {
-            if (isPrime(i)) {
-                if (prevPrime != -1 && (i - prevPrime < minDiff)) {
-                    minDiff = i - prevPrime;
-                    ans[0] = prevPrime;
-                    ans[1] = i;
+    public int[] closestPrimes(int left, int right) {
+        List<Integer> primeNumbers = new ArrayList<>();
+
+        // Find all prime numbers in the given range
+        for (int candidate = left; candidate <= right; candidate++) {
+            if (candidate % 2 == 0 && candidate > 2) {
+                continue;
+            }
+            if (isPrime(candidate)) {
+                // If a twin prime (or [2, 3]) is found, return immediately
+                if (
+                    !primeNumbers.isEmpty() &&
+                    candidate <= primeNumbers.get(primeNumbers.size() - 1) + 2
+                ) {
+                    return new int[] {
+                        primeNumbers.get(primeNumbers.size() - 1),
+                        candidate,
+                    };
                 }
-                prevPrime = i;
+                primeNumbers.add(candidate);
             }
         }
-        return ans;
+
+        // If fewer than 2 primes exist, return {-1, -1}
+        if (primeNumbers.size() < 2) {
+            return new int[] { -1, -1 };
+        }
+
+        // Find the closest prime pair
+        int[] closestPair = new int[] { -1, -1 };
+        int minDifference = 1000000;
+        for (int index = 1; index < primeNumbers.size(); index++) {
+            int difference =
+                primeNumbers.get(index) - primeNumbers.get(index - 1);
+            if (difference < minDifference) {
+                minDifference = difference;
+                closestPair = new int[] {
+                    primeNumbers.get(index - 1),
+                    primeNumbers.get(index),
+                };
+            }
+        }
+
+        return closestPair;
     }
 
-    private boolean isPrime(int n) {
-        if (n <= 1) return false;
-        if (n == 2 || n == 3) return true;
-        if (n % 2 == 0 || n % 3 == 0) return false;
-        for (int i = 5; i * i <= n; i += 6) {
-            if (n % i == 0 || n % (i + 2) == 0) return false;
+    // Function to check if a number is prime
+    private boolean isPrime(int number) {
+        if (number == 1) {
+            return false;
+        }
+        for (int divisor = 2; divisor <= (int) Math.sqrt(number); divisor++) {
+            if (number % divisor == 0) {
+                return false;
+            }
         }
         return true;
     }
