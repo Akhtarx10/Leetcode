@@ -12,6 +12,7 @@
 | [0090-subsets-ii](https://github.com/Akhtarx10/Leetcode/tree/master/0090-subsets-ii) |
 | [0162-find-peak-element](https://github.com/Akhtarx10/Leetcode/tree/master/0162-find-peak-element) |
 | [0169-majority-element](https://github.com/Akhtarx10/Leetcode/tree/master/0169-majority-element) |
+| [0189-rotate-array](https://github.com/Akhtarx10/Leetcode/tree/master/0189-rotate-array) |
 | [0268-missing-number](https://github.com/Akhtarx10/Leetcode/tree/master/0268-missing-number) |
 | [0287-find-the-duplicate-number](https://github.com/Akhtarx10/Leetcode/tree/master/0287-find-the-duplicate-number) |
 | [0407-trapping-rain-water-ii](https://github.com/Akhtarx10/Leetcode/tree/master/0407-trapping-rain-water-ii) |
@@ -153,6 +154,7 @@
 ## Math
 |  |
 | ------- |
+| [0189-rotate-array](https://github.com/Akhtarx10/Leetcode/tree/master/0189-rotate-array) |
 | [0268-missing-number](https://github.com/Akhtarx10/Leetcode/tree/master/0268-missing-number) |
 | [1421-find-numbers-with-even-number-of-digits](https://github.com/Akhtarx10/Leetcode/tree/master/1421-find-numbers-with-even-number-of-digits) |
 | [1444-number-of-steps-to-reduce-a-number-to-zero](https://github.com/Akhtarx10/Leetcode/tree/master/1444-number-of-steps-to-reduce-a-number-to-zero) |
@@ -432,6 +434,7 @@
 ## Two Pointers
 |  |
 | ------- |
+| [0189-rotate-array](https://github.com/Akhtarx10/Leetcode/tree/master/0189-rotate-array) |
 | [0287-find-the-duplicate-number](https://github.com/Akhtarx10/Leetcode/tree/master/0287-find-the-duplicate-number) |
 | [0861-flipping-an-image](https://github.com/Akhtarx10/Leetcode/tree/master/0861-flipping-an-image) |
 | [2265-partition-array-according-to-given-pivot](https://github.com/Akhtarx10/Leetcode/tree/master/2265-partition-array-according-to-given-pivot) |
