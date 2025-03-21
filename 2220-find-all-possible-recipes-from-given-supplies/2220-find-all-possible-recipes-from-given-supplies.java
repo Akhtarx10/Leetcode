@@ -1,39 +1,40 @@
 class Solution {
-  public List<String> findAllRecipes(String[] recipes, List<List<String>> ingredients,
-                                     String[] supplies) {
-    List<String> ans = new ArrayList<>();
-    Set<String> suppliesSet = new HashSet<>();
-    for (final String supply : supplies)
-      suppliesSet.add(supply);
-    Map<String, List<String>> graph = new HashMap<>();
-    Map<String, Integer> inDegrees = new HashMap<>();
-
-    // Build the graph.
-    for (int i = 0; i < recipes.length; ++i)
-      for (final String ingredient : ingredients.get(i))
-        if (!suppliesSet.contains(ingredient)) {
-          graph.putIfAbsent(ingredient, new ArrayList<>());
-          graph.get(ingredient).add(recipes[i]);
-          inDegrees.merge(recipes[i], 1, Integer::sum);
+    public List<String> findAllRecipes(String[] recipes, List<List<String>> ingredients, String[] supplies) {
+        Map<String, List<String>> graph = new HashMap<>();
+        Map<String, Integer> indegreeMap = new HashMap<>();
+      
+        for (int i = 0; i < recipes.length; ++i) {
+            for (String ingredient : ingredients.get(i)) {
+                graph.computeIfAbsent(ingredient, k -> new ArrayList<>()).add(recipes[i]);
+            }
+            indegreeMap.put(recipes[i], ingredients.get(i).size());
         }
-
-    // Perform topological sorting.
-    Queue<String> q = Arrays.stream(recipes)
-                          .filter(recipe -> inDegrees.getOrDefault(recipe, 0) == 0)
-                          .collect(Collectors.toCollection(ArrayDeque::new));
-
-    while (!q.isEmpty()) {
-      final String u = q.poll();
-      ans.add(u);
-      if (!graph.containsKey(u))
-        continue;
-      for (final String v : graph.get(u)) {
-        inDegrees.merge(v, -1, Integer::sum);
-        if (inDegrees.get(v) == 0)
-          q.offer(v);
-      }
+      
+        Deque<String> queue = new ArrayDeque<>();
+      
+        for (String supply : supplies) {
+            queue.offer(supply);
+        }
+      
+        List<String> availableRecipes = new ArrayList<>();
+      
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+          
+            for (int i = 0; i < size; ++i) {
+                String ingredient = queue.pollFirst();
+              
+                for (String recipe : graph.getOrDefault(ingredient, Collections.emptyList())) {
+                    indegreeMap.put(recipe, indegreeMap.get(recipe) - 1);
+                  
+                    if (indegreeMap.get(recipe) == 0) {
+                        availableRecipes.add(recipe);
+                        queue.offer(recipe);
+                    }
+                }
+            }
+        }
+      
+        return availableRecipes;
     }
-
-    return ans;
-  }
 }
