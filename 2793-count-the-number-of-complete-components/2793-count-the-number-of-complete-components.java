@@ -1,69 +1,45 @@
-class UnionFind {
-  public UnionFind(int n) {
-    id = new int[n];
-    rank = new int[n];
-    nodeCount = new int[n];
-    edgeCount = new int[n];
-    for (int i = 0; i < n; ++i) {
-      id[i] = i;
-      nodeCount[i] = 1;
-    }
-  }
-
-  public void unionByRank(int u, int v) {
-    final int i = find(u);
-    final int j = find(v);
-    ++edgeCount[i];
-    if (i == j)
-      return;
-    if (rank[i] < rank[j]) {
-      id[i] = j;
-      edgeCount[j] += edgeCount[i];
-      nodeCount[j] += nodeCount[i];
-    } else if (rank[i] > rank[j]) {
-      id[j] = i;
-      edgeCount[i] += edgeCount[j];
-      nodeCount[i] += nodeCount[j];
-    } else {
-      id[i] = j;
-      edgeCount[j] += edgeCount[i];
-      nodeCount[j] += nodeCount[i];
-      ++rank[j];
-    }
-  }
-
-  public int find(int u) {
-    return id[u] == u ? u : (id[u] = find(id[u]));
-  }
-
-  public boolean isComplete(int u) {
-    return nodeCount[u] * (nodeCount[u] - 1) / 2 == edgeCount[u];
-  }
-
-  private int[] id;
-  private int[] rank;
-  private int[] nodeCount;
-  private int[] edgeCount;
-}
-
 class Solution {
-  public int countCompleteComponents(int n, int[][] edges) {
-    int ans = 0;
-    UnionFind uf = new UnionFind(n);
-    Set<Integer> parents = new HashSet<>();
+    public int countCompleteComponents(int n, int[][] edges) {
+        int[] parent = new int[n];
+        int[] groupSize = new int[n];
+        int[] groupEdges = new int[n];
+        for (int i = 0; i < n; i++) {
+            parent[i] = i;
+            groupSize[i] = 1;
+        }
 
-    for (int[] edge : edges) {
-      final int u = edge[0];
-      final int v = edge[1];
-      uf.unionByRank(u, v);
+        for (int[] edge : edges) {
+            int root1 = findRoot(parent, edge[0]);
+            int root2 = findRoot(parent, edge[1]);
+            // union two groups
+            if (root1 != root2) {
+                parent[root1] = root2;
+                groupSize[root2] += groupSize[root1];
+                groupEdges[root2] += groupEdges[root1];
+            }
+            // group adds edge by 1
+            groupEdges[root2] += 1;
+        }
+        //  System.out.println(Arrays.toString(parent));
+        //  System.out.println(Arrays.toString(groupSize));
+        //  System.out.println(Arrays.toString(groupEdges));
+
+        // check the complete groups by neededEdges size * (size - 1) / 2
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            int size = groupSize[i], neededEdges = size * (size - 1) / 2;
+            if (parent[i] == i && neededEdges == groupEdges[i]) {
+                count += 1;
+            }
+        }
+        return count;
     }
 
-    for (int i = 0; i < n; ++i) {
-      final int parent = uf.find(i);
-      if (parents.add(parent) && uf.isComplete(parent))
-        ++ans;
+    private int findRoot(int[] parent, int cur) {
+        while (cur != parent[cur]) {
+            parent[cur] = parent[parent[cur]];
+            cur = parent[cur];
+        }
+        return cur;
     }
-
-    return ans;
-  }
 }
