@@ -1,44 +1,49 @@
 class Solution {
+    long inf = Long.MAX_VALUE / 2;
+    int mod = 1_000_000_007;
     public int countPaths(int n, int[][] roads) {
-        final long inf = Long.MAX_VALUE / 2;
-        final int mod = (int) 1e9 + 7;
-        long[][] g = new long[n][n];
-        for (var e : g) {
-            Arrays.fill(e, inf);
-        }
-        for (var r : roads) {
-            int u = r[0], v = r[1], t = r[2];
-            g[u][v] = t;
-            g[v][u] = t;
-        }
-        g[0][0] = 0;
+        long[][] graph = new long[n][n];
         long[] dist = new long[n];
+        long[] count = new long[n];
+        boolean[] visited = new boolean[n];
+
+        for (int i = 0; i < n; i++) {
+            Arrays.fill(graph[i], inf);
+        }
         Arrays.fill(dist, inf);
+
+        for (int[] r: roads) {
+            int u = r[0], v = r[1], time = r[2];
+            graph[u][v] = time;
+            graph[v][u] = time;
+        }
+
+        graph[0][0] = 0;
         dist[0] = 0;
-        long[] f = new long[n];
-        f[0] = 1;
-        boolean[] vis = new boolean[n];
-        for (int i = 0; i < n; ++i) {
-            int t = -1;
-            for (int j = 0; j < n; ++j) {
-                if (!vis[j] && (t == -1 || dist[j] < dist[t])) {
-                    t = j;
+        count[0] = 1;
+        for (int i =0; i <n; i++) {
+            int cur = -1;
+            for (int j = 0; j <n; j++) {
+                if (!visited[j] && (cur == -1 || dist[j] < dist[cur])) {
+                    cur = j;
                 }
             }
-            vis[t] = true;
-            for (int j = 0; j < n; ++j) {
-                if (j == t) {
+            visited[cur] = true;
+            for (int j = 0; j < n ;j++) {
+                if (j == cur) {
                     continue;
                 }
-                long ne = dist[t] + g[t][j];
-                if (dist[j] > ne) {
-                    dist[j] = ne;
-                    f[j] = f[t];
-                } else if (dist[j] == ne) {
-                    f[j] = (f[j] + f[t]) % mod;
+
+                long newDist = dist[cur] + graph[cur][j];
+                if (dist[j] > newDist) {
+                    dist[j] = newDist;
+                    count[j] = count[cur];
+                } else if (dist[j] == newDist) {
+                    count[j] += count[cur];
+                    count[j] %= mod;
                 }
             }
         }
-        return (int) f[n - 1];
+        return (int)count[n - 1];
     }
 }
