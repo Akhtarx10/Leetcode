@@ -102,6 +102,7 @@
 | [1631-number-of-sub-arrays-with-odd-sum](https://github.com/Akhtarx10/Leetcode/tree/master/1631-number-of-sub-arrays-with-odd-sum) |
 | [1744-number-of-ways-to-form-a-target-string-given-a-dictionary](https://github.com/Akhtarx10/Leetcode/tree/master/1744-number-of-ways-to-form-a-target-string-given-a-dictionary) |
 | [1849-maximum-absolute-sum-of-any-subarray](https://github.com/Akhtarx10/Leetcode/tree/master/1849-maximum-absolute-sum-of-any-subarray) |
+| [2090-number-of-ways-to-arrive-at-destination](https://github.com/Akhtarx10/Leetcode/tree/master/2090-number-of-ways-to-arrive-at-destination) |
 | [2562-count-ways-to-build-good-strings](https://github.com/Akhtarx10/Leetcode/tree/master/2562-count-ways-to-build-good-strings) |
 ## Hash Table
 |  |
@@ -344,6 +345,7 @@
 | [0820-find-eventual-safe-states](https://github.com/Akhtarx10/Leetcode/tree/master/0820-find-eventual-safe-states) |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/Akhtarx10/Leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
 | [1558-course-schedule-iv](https://github.com/Akhtarx10/Leetcode/tree/master/1558-course-schedule-iv) |
+| [2090-number-of-ways-to-arrive-at-destination](https://github.com/Akhtarx10/Leetcode/tree/master/2090-number-of-ways-to-arrive-at-destination) |
 | [2220-find-all-possible-recipes-from-given-supplies](https://github.com/Akhtarx10/Leetcode/tree/master/2220-find-all-possible-recipes-from-given-supplies) |
 | [2246-maximum-employees-to-be-invited-to-a-meeting](https://github.com/Akhtarx10/Leetcode/tree/master/2246-maximum-employees-to-be-invited-to-a-meeting) |
 | [2564-most-profitable-path-in-a-tree](https://github.com/Akhtarx10/Leetcode/tree/master/2564-most-profitable-path-in-a-tree) |
@@ -439,6 +441,7 @@
 |  |
 | ------- |
 | [1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/Akhtarx10/Leetcode/tree/master/1485-minimum-cost-to-make-at-least-one-valid-path-in-a-grid) |
+| [2090-number-of-ways-to-arrive-at-destination](https://github.com/Akhtarx10/Leetcode/tree/master/2090-number-of-ways-to-arrive-at-destination) |
 ## Union Find
 |  |
 | ------- |
@@ -455,6 +458,7 @@
 | ------- |
 | [0820-find-eventual-safe-states](https://github.com/Akhtarx10/Leetcode/tree/master/0820-find-eventual-safe-states) |
 | [1558-course-schedule-iv](https://github.com/Akhtarx10/Leetcode/tree/master/1558-course-schedule-iv) |
+| [2090-number-of-ways-to-arrive-at-destination](https://github.com/Akhtarx10/Leetcode/tree/master/2090-number-of-ways-to-arrive-at-destination) |
 | [2220-find-all-possible-recipes-from-given-supplies](https://github.com/Akhtarx10/Leetcode/tree/master/2220-find-all-possible-recipes-from-given-supplies) |
 | [2246-maximum-employees-to-be-invited-to-a-meeting](https://github.com/Akhtarx10/Leetcode/tree/master/2246-maximum-employees-to-be-invited-to-a-meeting) |
 ## Two Pointers
