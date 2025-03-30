@@ -1,22 +1,28 @@
 class Solution {
-  public List<Integer> partitionLabels(String s) {
-    List<Integer> ans = new ArrayList<>();
-    int[] rightmost = new int[26];
+    public List<Integer> partitionLabels(String s) {
+        int[] lastOccurrence = new int[26];
+        int idx = 0;
+        for (char c : s.toCharArray()) {
+            lastOccurrence[c-'a'] = idx;
+            idx++;
+        }
 
-    for (int i = 0; i < s.length(); ++i)
-      rightmost[s.charAt(i) - 'a'] = i;
-
-    int l = 0; // the leftmost index of the current running string
-    int r = 0; // the rightmost index of the current running string
-
-    for (int i = 0; i < s.length(); ++i) {
-      r = Math.max(r, rightmost[s.charAt(i) - 'a']);
-      if (r == i) {
-        ans.add(i - l + 1);
-        l = i + 1;
-      }
+        List<Integer> ans = new ArrayList<>();
+        idx = 0;
+        int st = 0, n = s.length();
+        while (idx < n) {
+            st = getMax(s,lastOccurrence,idx);
+            ans.add(st-idx+1);
+            idx = st+1;
+        }
+        return ans;
     }
-
-    return ans;
-  }
+    private int getMax(String str, int[] lastOccurence, int s) {
+        int l = Math.max(s,lastOccurence[str.charAt(s)-'a']), m = l;
+        while (s <= Math.max(m,l)) {
+            m = Math.max(m,lastOccurence[str.charAt(s)-'a']);
+            s++;
+        }
+        return m;
+    }
 }
