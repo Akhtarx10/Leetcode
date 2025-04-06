@@ -1,40 +1,31 @@
 class Solution {
-  public List<Integer> largestDivisibleSubset(int[] nums) {
-    final int n = nums.length;
-    List<Integer> ans = new ArrayList<>();
-    // sizeEndsAt[i] := the maximum size ends in nums[i]
-    int[] sizeEndsAt = new int[n];
-    // prevIndex[i] := the best index s.t.
-    // 1. nums[i] % nums[prevIndex[i]] == 0 and
-    // 2. can increase the size of the subset
-    int[] prevIndex = new int[n];
-    int maxSize = 0; // Max size of the subset
-    int index = -1;  // Track the best ending index
-
-    Arrays.fill(sizeEndsAt, 1);
-    Arrays.fill(prevIndex, -1);
-    Arrays.sort(nums);
-
-    // Fix the maximum ending number in the subset.
-    for (int i = 0; i < n; ++i) {
-      for (int j = i - 1; j >= 0; --j)
-        if (nums[i] % nums[j] == 0 && sizeEndsAt[i] < sizeEndsAt[j] + 1) {
-          sizeEndsAt[i] = sizeEndsAt[j] + 1;
-          prevIndex[i] = j;
+    public List<Integer> largestDivisibleSubset(int[] arr) {
+        Arrays.sort(arr);
+        int n=arr.length;
+        int[] dp = new int[n];
+        int[] ind = new int[n];
+        int res=0;
+        ArrayList<Integer> ans = new ArrayList<>();
+        for(int i=0;i<n;i++){
+            int maxi=0;
+            ind[i]=i;
+            dp[i]=1;
+            int limit = (arr[i] + 1) / 2;
+            for(int j=0;j<i && arr[j]<=limit;j++){
+                if(arr[i]%arr[j]==0 && dp[j]+1>dp[i])
+                {
+                    dp[i]=1+dp[j];
+                    ind[i]=j;
+                }
+            }
+            res=dp[i]>dp[res]?i:res;
         }
-      // Find a new subset that has a bigger size.
-      if (maxSize < sizeEndsAt[i]) {
-        maxSize = sizeEndsAt[i];
-        index = i; // Update the best ending index.
-      }
+        while(res!=ind[res]){
+            ans.add(arr[res]);
+            res=ind[res];
+        }
+        ans.add(arr[res]);
+        Collections.reverse(ans);
+        return ans;
     }
-
-    // Loop from the back to the front.
-    while (index != -1) {
-      ans.add(nums[index]);
-      index = prevIndex[index];
-    }
-
-    return ans;
-  }
 }
