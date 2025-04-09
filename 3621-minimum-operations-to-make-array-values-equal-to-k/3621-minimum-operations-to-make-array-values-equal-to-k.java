@@ -1,11 +1,19 @@
 class Solution {
-  public int minOperations(int[] nums, int k) {
-    Set<Integer> numsSet = Arrays.stream(nums).boxed().collect(Collectors.toSet());
-    final int mn = Arrays.stream(nums).min().getAsInt();
-    if (mn < k)
-      return -1;
-    if (mn > k)
-      return numsSet.size();
-    return numsSet.size() - 1;
-  }
+    public int minOperations(int[] nums, int k) {
+        boolean[] has = new boolean[101];
+
+        for (int num : nums) {
+            has[num] = true;
+        }
+        int cnt = 0;
+        for (int i = 0; i < has.length; i++) {
+            if (!has[i]) continue;
+
+            if (has[i] && i < k)
+                return -1;
+            else if (has[i] && i > k)
+                cnt++;
+        }
+        return cnt;
+    }
 }
