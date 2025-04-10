@@ -1,40 +1,34 @@
 class Solution {
-    private String s;
-    private String t;
-    private Long[] f;
-    private int limit;
-
     public long numberOfPowerfulInt(long start, long finish, int limit, String s) {
-        this.s = s;
-        this.limit = limit;
-        t = String.valueOf(start - 1);
-        f = new Long[20];
-        long a = dfs(0, true);
-        t = String.valueOf(finish);
-        f = new Long[20];
-        long b = dfs(0, true);
-        return b - a;
+        long suffix = 0L;
+        for (char c : s.toCharArray())
+            suffix = suffix * 10 + c - '0';
+        if (suffix > finish)
+            return 0;
+        long div = (long) Math.pow(10, s.length()), ps = start / div, pf = finish / div;
+        if (finish % div >= suffix)
+            pf++;
+        if (start % div > suffix)
+            ps++;
+        return getAvailNum(pf, limit) - getAvailNum(ps, limit);
     }
 
-    private long dfs(int pos, boolean lim) {
-        if (t.length() < s.length()) {
+    private long getAvailNum(long num, long limit) {
+        if (num == 0)
             return 0;
+        if (limit == 9)
+            return num;
+        int digits = (int) Math.log10(num);
+        long div = (long) Math.pow(10, digits), res = 0L;
+        for (int i = digits; i >= 0; i--) {
+            int d = (int) (num / div);
+            if (d > limit)
+                return res + (long) Math.pow(limit + 1, i + 1);
+            else
+                res += d * (long) Math.pow(limit + 1, i);
+            num %= div;
+            div /= 10;
         }
-        if (!lim && f[pos] != null) {
-            return f[pos];
-        }
-        if (t.length() - pos == s.length()) {
-            return lim ? (s.compareTo(t.substring(pos)) <= 0 ? 1 : 0) : 1;
-        }
-        int up = lim ? t.charAt(pos) - '0' : 9;
-        up = Math.min(up, limit);
-        long ans = 0;
-        for (int i = 0; i <= up; ++i) {
-            ans += dfs(pos + 1, lim && i == (t.charAt(pos) - '0'));
-        }
-        if (!lim) {
-            f[pos] = ans;
-        }
-        return ans;
+        return res;
     }
 }
