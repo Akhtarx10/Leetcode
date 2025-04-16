@@ -1,24 +1,45 @@
-class Solution {
+public class Solution {
     public long countGood(int[] nums, int k) {
-        Map<Integer, Integer> freq = new HashMap<>();
-        int n = nums.length;
+        if (nums.length < 2) {
+            return 0L;
+        }
+        Map<Integer, Integer> countMap = new HashMap<>(nums.length, 0.99f);
+        long goodSubArrays = 0L;
+        long current = 0L;
         int left = 0;
-        long pairs = 0, res = 0;
-
-        for (int right = 0; right < n; right++) {
-            int val = nums[right];
-            pairs += freq.getOrDefault(val, 0);
-            freq.put(val, freq.getOrDefault(val, 0) + 1);
-
-            while (pairs >= k) {
-                res += n - right;
-                int leftVal = nums[left];
-                freq.put(leftVal, freq.get(leftVal) - 1);
-                pairs -= freq.get(leftVal);
-                left++;
+        int right = -1;
+        while (left < nums.length) {
+            if (current < k) {
+                if (++right == nums.length) {
+                    break;
+                }
+          
+                Integer num = nums[right];
+                Integer count = countMap.get(num);
+                if (count == null) {
+                    count = 1;
+                } else {
+                    current += count;
+                    if (current >= k) {
+                        goodSubArrays += nums.length - right;
+                    }
+                    count = count + 1;
+                }
+                countMap.put(num, count);
+            } else {
+                Integer num = nums[left++];
+                int count = countMap.get(num) - 1;
+                if (count > 0) {
+                    countMap.put(num, count);
+                    current -= count;
+                } else {
+                    countMap.remove(num);
+                }
+                if (current >= k) {
+                    goodSubArrays += nums.length - right;
+                }
             }
         }
-
-        return res;
+        return goodSubArrays;
     }
 }
