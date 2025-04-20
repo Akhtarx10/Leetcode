@@ -1,16 +1,17 @@
 class Solution {
     public int numRabbits(int[] answers) {
-        Map<Integer, Integer> frequencyMap = new HashMap<>();
-        for (int answer : answers) {
-            frequencyMap.put(answer, frequencyMap.getOrDefault(answer, 0) + 1);
+
+        int n = answers.length;
+        int[] count = new int[1000];
+        
+        int ans = 0;
+        for(int x:answers){
+            if(++count[x] == 1)
+                ans += x + 1;
+            if(count[x] == x + 1)
+                count[x] = 0;
         }
-        int totalRabbits = 0;
-        for (Map.Entry<Integer, Integer> entry : frequencyMap.entrySet()) {
-            int otherRabbits = entry.getKey();
-            int frequencyOfClaim = entry.getValue();
-            int groupsOfRabbits = (int) Math.ceil(frequencyOfClaim / ((otherRabbits + 1) * 1.0));
-            totalRabbits += groupsOfRabbits * (otherRabbits + 1);
-        }
-        return totalRabbits;
+        
+        return ans;
     }
 }
