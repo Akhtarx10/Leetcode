@@ -15,7 +15,7 @@ class Solution {
             return node;
         }
 
-        while (node != null && node.next != null) {
+        while ( node.next != null) {
             if (node.val == node.next.val) {
                 node.next = node.next.next;
             } else {
