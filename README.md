@@ -612,4 +612,8 @@
 |  |
 | ------- |
 | [2280-count-good-triplets-in-an-array](https://github.com/Akhtarx10/Leetcode/tree/master/2280-count-good-triplets-in-an-array) |
+## Linked List
+|  |
+| ------- |
+| [0083-remove-duplicates-from-sorted-list](https://github.com/Akhtarx10/Leetcode/tree/master/0083-remove-duplicates-from-sorted-list) |
 <!---LeetCode Topics End-->
