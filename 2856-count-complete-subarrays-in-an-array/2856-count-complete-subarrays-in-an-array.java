@@ -1,18 +1,25 @@
-import java.util.*;
-
 class Solution {
     public int countCompleteSubarrays(int[] nums) {
-        int totalDistinct = new HashSet<>(Arrays.asList(Arrays.stream(nums).boxed().toArray(Integer[]::new))).size();
-        int count = 0;
-        for (int i = 0; i < nums.length; i++) {
-            Set<Integer> seen = new HashSet<>();
-            for (int j = i; j < nums.length; j++) {
-                seen.add(nums[j]);
-                if (seen.size() == totalDistinct) {
-                    count++;
-                }
+        boolean[] exists = new boolean[2001];
+        int distinct = 0;
+        for( int n : nums ){
+            if( !exists[n] ){
+                exists[n] = true;
+                distinct++;
             }
         }
-        return count;
+        int[] freq = new int[2001];
+        int count = 0, n = nums.length;
+        int sub = 0;
+        for( int start = 0, end = 0; end < n; end++ ){
+            if( freq[ nums[ end ] ]++ == 0 )
+                count++;
+            while( count == distinct ){
+                sub += n - end;
+                if( freq[ nums[ start ++ ] ]-- == 1 )
+                    count--;
+            }
+        }
+        return sub;
     }
 }
