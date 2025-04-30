@@ -623,6 +623,7 @@
 ## Recursion
 |  |
 | ------- |
+| [0021-merge-two-sorted-lists](https://github.com/Akhtarx10/Leetcode/tree/master/0021-merge-two-sorted-lists) |
 | [2050-count-good-numbers](https://github.com/Akhtarx10/Leetcode/tree/master/2050-count-good-numbers) |
 ## Merge Sort
 |  |
@@ -631,6 +632,7 @@
 ## Linked List
 |  |
 | ------- |
+| [0021-merge-two-sorted-lists](https://github.com/Akhtarx10/Leetcode/tree/master/0021-merge-two-sorted-lists) |
 | [0083-remove-duplicates-from-sorted-list](https://github.com/Akhtarx10/Leetcode/tree/master/0083-remove-duplicates-from-sorted-list) |
 ## Monotonic Queue
 |  |
