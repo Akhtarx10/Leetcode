@@ -1,59 +1,69 @@
 class Solution {
-  public int maxTaskAssign(int[] tasks, int[] workers, int pills, int strength) {
-    int ans = 0;
-    int l = 0;
-    int r = Math.min(tasks.length, workers.length);
+    public int maxTaskAssign(int[] tasks, int[] workers, int pills, int strength) {
 
-    Arrays.sort(tasks);
-    Arrays.sort(workers);
+        int m = tasks.length, n = workers.length;
+        Arrays.sort(tasks);
+        Arrays.sort(workers);
 
-    while (l <= r) {
-      final int m = (l + r) / 2;
-      if (canComplete(tasks, workers, pills, strength, m)) {
-        ans = m;
-        l = m + 1;
-
-      } else {
-        r = m - 1;
-      }
-    }
-
-    return ans;
-  }
-
-  // Returns true if we can finish k tasks.
-  private boolean canComplete(int[] tasks, int[] workers, int pillsLeft, int strength, int k) {
-    // k strongest workers
-    TreeMap<Integer, Integer> sortedWorkers = new TreeMap<>();
-    for (int i = workers.length - k; i < workers.length; ++i)
-      sortedWorkers.merge(workers[i], 1, Integer::sum);
-
-    // Out of the k smallest tasks, start from the biggest one.
-    for (int i = k - 1; i >= 0; --i) {
-      // Find the first worker that has strength >= tasks[i].
-      Integer lo = sortedWorkers.ceilingKey(tasks[i]);
-      if (lo != null) {
-        sortedWorkers.merge(lo, -1, Integer::sum);
-        if (sortedWorkers.get(lo) == 0) {
-          sortedWorkers.remove(lo);
+        int l = 0, r = Math.min(m, n);
+        while(l <= r){
+            int mid = l + r >> 1;
+            if(check(tasks, workers, pills, strength, mid, n - mid))
+                l = mid+1;
+            else
+                r = mid-1;
         }
-      } else if (pillsLeft > 0) {
-        // Find the first worker that has strength >= tasks[i] - strength.
-        lo = sortedWorkers.ceilingKey(tasks[i] - strength);
-        if (lo != null) {
-          sortedWorkers.merge(lo, -1, Integer::sum);
-          if (sortedWorkers.get(lo) == 0) {
-            sortedWorkers.remove(lo);
-          }
-          --pillsLeft;
-        } else {
-          return false;
-        }
-      } else {
-        return false;
-      }
-    }
 
-    return true;
-  }
+        return r;
+    }
+    
+    public boolean check(int[] tasks, int[] workers, int pills, int strength, int mid, int start){
+        
+        int[] que = new int[mid];
+        int write = 0, read = 0; 
+
+        for(int i = 0, j = 0; i < mid; i++){
+            int curStrength  = workers[start + i];
+            if(read == write){
+
+                if(curStrength >= tasks[j]){
+                    j++;
+                    continue;
+                }
+
+                if(pills == 0)
+                    return false;
+                
+                curStrength  += strength;
+                pills--;
+
+                while(j < mid && curStrength >= tasks[j])
+                    que[write++] = tasks[j++];
+                
+                if(read == write)
+                    return false;
+                write--;
+                
+            }else{
+
+                if(curStrength >= que[read]){
+                    read++;
+                    continue;
+                }
+
+                if(pills == 0)
+                    return false;
+                
+                curStrength  += strength;
+                pills--;
+
+                while(j < mid && curStrength >= tasks[j])
+                    que[write++] = tasks[j++];
+                
+                write--;
+            }
+        }
+
+        return read == write;        
+    }
 }
