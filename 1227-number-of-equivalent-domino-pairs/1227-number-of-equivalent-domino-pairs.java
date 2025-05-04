@@ -1,14 +1,22 @@
 class Solution {
-  public int numEquivDominoPairs(int[][] dominoes) {
-    int ans = 0;
-    Map<Integer, Integer> count = new HashMap<>();
-
-    for (int[] domino : dominoes) {
-      int key = Math.min(domino[0], domino[1]) * 10 + Math.max(domino[0], domino[1]);
-      ans += count.getOrDefault(key, 0);
-      count.merge(key, 1, Integer::sum);
+    public int numEquivDominoPairs(int[][] dominoes) {
+        int[][] dp = new int[10][10];
+        for(int[] domino : dominoes){
+            dp[domino[0]][domino[1]]++;
+        }
+        int max = 0;
+        for(int i = 1; i < dp.length; i++){
+            for(int j = i; j < dp[i].length; j++){
+                int count = dp[i][j];
+                if(i != j){
+                    count += dp[j][i];
+                }
+                max += count * (count - 1) / 2;
+            }
+        }
+        return max;
     }
-
-    return ans;
-  }
 }
+
+    
+    
