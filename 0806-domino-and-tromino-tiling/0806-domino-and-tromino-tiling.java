@@ -1,15 +1,12 @@
 class Solution {
     public int numTilings(int n) {
-        long[] f = {1, 0, 0, 0};
-        int mod = (int) 1e9 + 7;
-        for (int i = 1; i <= n; ++i) {
-            long[] g = new long[4];
-            g[0] = (f[0] + f[1] + f[2] + f[3]) % mod;
-            g[1] = (f[2] + f[3]) % mod;
-            g[2] = (f[1] + f[3]) % mod;
-            g[3] = f[0];
-            f = g;
+        long[] dp = new long[n + 3]; 
+        dp[0] = 1; 
+        dp[1] = 2; 
+        dp[2] = 5;
+        for (int i = 3; i < n; i ++) {
+            dp[i] = (dp[i - 1] * 2 + dp[i - 3]) % 1000000007;
         }
-        return (int) f[0];
+        return (int)dp[n - 1];
     }
 }
