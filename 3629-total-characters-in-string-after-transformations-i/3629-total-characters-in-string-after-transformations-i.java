@@ -1,30 +1,20 @@
 class Solution {
     public int lengthAfterTransformations(String s, int t) {
-        final int MOD = 1_000_000_007;
-        long length = s.length();
-        long[] freq = new long[26];
-        
-        for (char c : s.toCharArray()) {
-            freq[c - 'a']++;
+    	int MOD = (int)1e9 + 7, ans = 0;
+        long[] count = new long[26];
+        for (int c : s.toCharArray())
+        	count[c - 'a']++;
+        for (; t >= 26; t -= 26) {
+        	long z = count[25];
+        	for (int i = 25; i > 0; i--)
+        		count[i] = (count[i] + count[i - 1]) % MOD;
+        	count[0] = (count[0] + z) % MOD;
+        	count[1] = (count[1] + z) % MOD;
         }
-
-        for (int i = 0; i < t; i++) {
-            long[] nextFreq = new long[26];
-
-            // handle 'z' → "ab"
-            long zCount = freq[25];
-            length = (length + zCount) % MOD;
-            nextFreq[0] = (nextFreq[0] + zCount) % MOD; // 'a'
-            nextFreq[1] = (nextFreq[1] + zCount) % MOD; // 'b'
-
-            // handle other characters shift
-            for (int j = 0; j < 25; j++) {
-                nextFreq[j + 1] = (nextFreq[j + 1] + freq[j]) % MOD;
-            }
-
-            freq = nextFreq;
-        }
-
-        return (int) length;
+        for (int i = 0; i < 26; i++)
+        	ans = (int)((ans + count[i]) % MOD);
+        for (int i = 26 - t; i < 26; i++)
+        	ans = (int)((ans + count[i]) % MOD);
+        return ans;
     }
 }
