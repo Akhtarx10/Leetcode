@@ -9,6 +9,7 @@
 | [0041-first-missing-positive](https://github.com/Akhtarx10/Leetcode/tree/master/0041-first-missing-positive) |
 | [0046-permutations](https://github.com/Akhtarx10/Leetcode/tree/master/0046-permutations) |
 | [0053-maximum-subarray](https://github.com/Akhtarx10/Leetcode/tree/master/0053-maximum-subarray) |
+| [0075-sort-colors](https://github.com/Akhtarx10/Leetcode/tree/master/0075-sort-colors) |
 | [0090-subsets-ii](https://github.com/Akhtarx10/Leetcode/tree/master/0090-subsets-ii) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/Akhtarx10/Leetcode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0162-find-peak-element](https://github.com/Akhtarx10/Leetcode/tree/master/0162-find-peak-element) |
@@ -210,6 +211,7 @@
 ## Sorting
 |  |
 | ------- |
+| [0075-sort-colors](https://github.com/Akhtarx10/Leetcode/tree/master/0075-sort-colors) |
 | [0169-majority-element](https://github.com/Akhtarx10/Leetcode/tree/master/0169-majority-element) |
 | [0268-missing-number](https://github.com/Akhtarx10/Leetcode/tree/master/0268-missing-number) |
 | [0368-largest-divisible-subset](https://github.com/Akhtarx10/Leetcode/tree/master/0368-largest-divisible-subset) |
@@ -610,6 +612,7 @@
 ## Two Pointers
 |  |
 | ------- |
+| [0075-sort-colors](https://github.com/Akhtarx10/Leetcode/tree/master/0075-sort-colors) |
 | [0189-rotate-array](https://github.com/Akhtarx10/Leetcode/tree/master/0189-rotate-array) |
 | [0287-find-the-duplicate-number](https://github.com/Akhtarx10/Leetcode/tree/master/0287-find-the-duplicate-number) |
 | [0768-partition-labels](https://github.com/Akhtarx10/Leetcode/tree/master/0768-partition-labels) |
