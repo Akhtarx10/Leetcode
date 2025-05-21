@@ -9,6 +9,7 @@
 | [0041-first-missing-positive](https://github.com/Akhtarx10/Leetcode/tree/master/0041-first-missing-positive) |
 | [0046-permutations](https://github.com/Akhtarx10/Leetcode/tree/master/0046-permutations) |
 | [0053-maximum-subarray](https://github.com/Akhtarx10/Leetcode/tree/master/0053-maximum-subarray) |
+| [0073-set-matrix-zeroes](https://github.com/Akhtarx10/Leetcode/tree/master/0073-set-matrix-zeroes) |
 | [0075-sort-colors](https://github.com/Akhtarx10/Leetcode/tree/master/0075-sort-colors) |
 | [0090-subsets-ii](https://github.com/Akhtarx10/Leetcode/tree/master/0090-subsets-ii) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/Akhtarx10/Leetcode/tree/master/0121-best-time-to-buy-and-sell-stock) |
@@ -166,6 +167,7 @@
 |  |
 | ------- |
 | [0041-first-missing-positive](https://github.com/Akhtarx10/Leetcode/tree/master/0041-first-missing-positive) |
+| [0073-set-matrix-zeroes](https://github.com/Akhtarx10/Leetcode/tree/master/0073-set-matrix-zeroes) |
 | [0169-majority-element](https://github.com/Akhtarx10/Leetcode/tree/master/0169-majority-element) |
 | [0268-missing-number](https://github.com/Akhtarx10/Leetcode/tree/master/0268-missing-number) |
 | [0442-find-all-duplicates-in-an-array](https://github.com/Akhtarx10/Leetcode/tree/master/0442-find-all-duplicates-in-an-array) |
@@ -565,6 +567,7 @@
 ## Matrix
 |  |
 | ------- |
+| [0073-set-matrix-zeroes](https://github.com/Akhtarx10/Leetcode/tree/master/0073-set-matrix-zeroes) |
 | [0407-trapping-rain-water-ii](https://github.com/Akhtarx10/Leetcode/tree/master/0407-trapping-rain-water-ii) |
 | [0854-making-a-large-island](https://github.com/Akhtarx10/Leetcode/tree/master/0854-making-a-large-island) |
 | [0861-flipping-an-image](https://github.com/Akhtarx10/Leetcode/tree/master/0861-flipping-an-image) |
