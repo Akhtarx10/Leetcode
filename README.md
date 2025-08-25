@@ -740,4 +740,8 @@
 |  |
 | ------- |
 | [1986-largest-color-value-in-a-directed-graph](https://github.com/Akhtarx10/Leetcode/tree/master/1986-largest-color-value-in-a-directed-graph) |
+## Database
+|  |
+| ------- |
+| [0175-combine-two-tables](https://github.com/Akhtarx10/Leetcode/tree/master/0175-combine-two-tables) |
 <!---LeetCode Topics End-->
